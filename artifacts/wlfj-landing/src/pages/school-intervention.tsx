@@ -1,7 +1,7 @@
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/fade-in";
 import { Link } from "wouter";
 import { ArrowRight, GraduationCap, BookOpen, PenTool, Users } from "lucide-react";
-import school1 from "@/assets/images/school-1.png";
+import school1 from "@assets/bill-wegener-8ldqRkOk5oo-unsplash_1782214846278.jpg";
 import school2 from "@/assets/images/school-2.png";
 
 export default function SchoolIntervention() {

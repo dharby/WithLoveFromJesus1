@@ -1,7 +1,7 @@
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/fade-in";
 import { Link } from "wouter";
 import { ArrowRight, HeartPulse, Stethoscope, Baby, Activity } from "lucide-react";
-import health1 from "@/assets/images/health-1.png";
+import health1 from "@assets/japazon-fonkwo-8ls3De7W4XQ-unsplash_1782214846275.jpg";
 import health2 from "@/assets/images/health-2.png";
 
 export default function HealthIntervention() {
