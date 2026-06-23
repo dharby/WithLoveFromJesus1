@@ -1,0 +1,174 @@
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/fade-in";
+import { AnimatedCounter } from "@/components/ui/animated-counter";
+import { Link } from "wouter";
+import { ArrowRight, BookOpen, HeartPulse } from "lucide-react";
+import homeHero from "@/assets/images/home-hero.png";
+import homeImpact from "@/assets/images/home-impact.png";
+
+export default function Home() {
+  return (
+    <main className="w-full">
+      {/* Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden bg-muted">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px] z-10" />
+          <img 
+            src={homeHero} 
+            alt="Community gathering" 
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
+        
+        <div className="container mx-auto px-4 md:px-6 relative z-20">
+          <div className="max-w-3xl">
+            <FadeIn>
+              <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground leading-[1.1] mb-6">
+                Where hope is made <span className="text-primary italic">tangible.</span>
+              </h1>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <p className="text-xl md:text-2xl text-foreground/80 font-sans mb-10 max-w-2xl leading-relaxed">
+                A social intervention NGO serving children through education and supporting new mothers through maternal health programs.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.4} className="flex flex-wrap gap-4">
+              <Link 
+                href="/contact" 
+                className="bg-primary text-primary-foreground px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary/90 transition-all hover:-translate-y-1 hover:shadow-lg inline-flex items-center gap-2"
+              >
+                Join Our Mission <ArrowRight size={20} />
+              </Link>
+              <Link 
+                href="/school-intervention" 
+                className="bg-white text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-muted transition-all border border-border inline-flex items-center gap-2"
+              >
+                Our Programs
+              </Link>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Counters */}
+      <section className="py-20 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 md:px-6">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-primary-foreground/20">
+            <StaggerItem className="flex flex-col items-center justify-center p-6">
+              <AnimatedCounter value={1250} suffix="+" className="text-5xl md:text-6xl font-serif font-bold text-secondary mb-2" />
+              <p className="text-lg font-sans text-primary-foreground/90 uppercase tracking-wider font-medium">Children Served</p>
+            </StaggerItem>
+            <StaggerItem className="flex flex-col items-center justify-center p-6">
+              <AnimatedCounter value={450} className="text-5xl md:text-6xl font-serif font-bold text-secondary mb-2" />
+              <p className="text-lg font-sans text-primary-foreground/90 uppercase tracking-wider font-medium">Scholarships Given</p>
+            </StaggerItem>
+            <StaggerItem className="flex flex-col items-center justify-center p-6">
+              <AnimatedCounter value={890} suffix="+" className="text-5xl md:text-6xl font-serif font-bold text-secondary mb-2" />
+              <p className="text-lg font-sans text-primary-foreground/90 uppercase tracking-wider font-medium">Mothers Supported</p>
+            </StaggerItem>
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Programs Overview */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4 md:px-6">
+          <FadeIn className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Our Interventions</h2>
+            <p className="text-lg text-foreground/70 font-sans">
+              We focus our energy where it can make the deepest impact: education for the next generation, and health for the mothers who raise them.
+            </p>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <FadeIn direction="right">
+              <Link href="/school-intervention" className="group block h-full">
+                <div className="bg-card rounded-2xl overflow-hidden border border-border shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-full flex flex-col">
+                  <div className="p-8 md:p-12 flex-1">
+                    <div className="w-16 h-16 bg-secondary/20 rounded-2xl flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
+                      <BookOpen size={32} />
+                    </div>
+                    <h3 className="text-3xl font-serif font-bold text-primary mb-4 group-hover:text-secondary transition-colors">School Intervention</h3>
+                    <p className="text-foreground/70 font-sans text-lg mb-8 leading-relaxed">
+                      Transforming life trajectories through primary and secondary education scholarships, school supplies, and continuous mentorship.
+                    </p>
+                    <div className="inline-flex items-center text-primary font-bold gap-2 group-hover:gap-4 transition-all">
+                      Explore Program <ArrowRight size={20} />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </FadeIn>
+
+            <FadeIn direction="left" delay={0.2}>
+              <Link href="/health-intervention" className="group block h-full">
+                <div className="bg-card rounded-2xl overflow-hidden border border-border shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-full flex flex-col">
+                  <div className="p-8 md:p-12 flex-1">
+                    <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-8 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                      <HeartPulse size={32} />
+                    </div>
+                    <h3 className="text-3xl font-serif font-bold text-primary mb-4 group-hover:text-accent transition-colors">Health Intervention</h3>
+                    <p className="text-foreground/70 font-sans text-lg mb-8 leading-relaxed">
+                      Reaching mothers who would otherwise go without care. Providing antenatal support, vital health resources, and outreach to remote communities.
+                    </p>
+                    <div className="inline-flex items-center text-primary font-bold gap-2 group-hover:gap-4 transition-all">
+                      Explore Program <ArrowRight size={20} />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Why We Exist */}
+      <section className="py-24 bg-muted overflow-hidden relative">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <FadeIn direction="right">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
+                <img src={homeImpact} alt="Joyful children" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-primary/10"></div>
+              </div>
+            </FadeIn>
+            
+            <FadeIn direction="left" className="max-w-xl">
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Why We Exist</h2>
+              <div className="space-y-6 text-lg text-foreground/80 font-sans leading-relaxed">
+                <p>
+                  We believe that every child deserves the dignity of an education, and every mother deserves the safety of proper healthcare. 
+                </p>
+                <p>
+                  In the communities we serve, a simple scholarship isn't just about books—it's about breaking a cycle. An antenatal visit isn't just a checkup—it's a profound statement that a mother's life matters.
+                </p>
+                <p className="font-serif text-2xl text-accent italic mt-8 border-l-4 border-secondary pl-6 py-2">
+                  "This work isn't charity. It's love made visible."
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4 md:px-6 text-center max-w-4xl">
+          <FadeIn>
+            <h2 className="text-4xl md:text-6xl font-serif font-bold text-primary mb-8">
+              Be part of the story.
+            </h2>
+            <p className="text-xl text-foreground/70 font-sans mb-10 leading-relaxed max-w-2xl mx-auto">
+              Your support translates directly into school fees, medical supplies, and hope for families who need it most.
+            </p>
+            <Link 
+              href="/contact" 
+              className="bg-accent text-white px-10 py-5 rounded-full text-xl font-bold hover:bg-accent/90 transition-all hover:shadow-xl hover:-translate-y-1 inline-flex items-center gap-3"
+            >
+              Get Involved Today <ArrowRight size={24} />
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
+    </main>
+  );
+}

@@ -1,0 +1,38 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "w33pHRQyeW6xUCxI9VFjF"
+uri = "file://artifacts/wlfj-landing/src/assets/images/home-hero.png"
+type = "image"
+title = "Warm community gathering scene"
+
+[[generated]]
+id = "KqK2DFuE_IOibnjr1rzUz"
+uri = "file://artifacts/wlfj-landing/src/assets/images/home-impact.png"
+type = "image"
+title = "Joyful children playing together"
+
+[[generated]]
+id = "otxIvk4V7MOKeqZbeZGwM"
+uri = "file://artifacts/wlfj-landing/src/assets/images/school-1.png"
+type = "image"
+title = "Sunlit classroom with children"
+
+[[generated]]
+id = "TYQk4xrxe6h7r4Fp1sjgY"
+uri = "file://artifacts/wlfj-landing/src/assets/images/school-2.png"
+type = "image"
+title = "Child reading with focus"
+
+[[generated]]
+id = "nNoWNV-t3n_Iq2h3NZS-p"
+uri = "file://artifacts/wlfj-landing/src/assets/images/health-1.png"
+type = "image"
+title = "Maternal health clinic care"
+
+[[generated]]
+id = "nmI9mzP6q6VM87FAOAjkP"
+uri = "file://artifacts/wlfj-landing/src/assets/images/health-2.png"
+type = "image"
+title = "Mother holding newborn baby"
