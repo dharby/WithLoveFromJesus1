@@ -10,8 +10,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
+
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
@@ -23,15 +22,15 @@ export default function Contact() {
   };
 
   return (
-    <main className="w-full pt-20">
+    <main className="w-full pt-16">
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <FadeIn className="text-center max-w-2xl mx-auto mb-16">
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-primary mb-6">
-              Let's connect.
+              Let us connect.
             </h1>
             <p className="text-xl text-foreground/70 font-sans leading-relaxed">
-              Whether you want to sponsor a child, support a clinic, or simply learn more about our work—we would love to hear from you.
+              Whether you want to sponsor a child, support a clinic, or simply learn more about our work, we would love to hear from you.
             </p>
           </FadeIn>
 
@@ -40,18 +39,18 @@ export default function Contact() {
             <FadeIn direction="right" className="lg:col-span-2 space-y-8">
               <div className="bg-muted p-8 rounded-2xl border border-border h-full">
                 <h3 className="font-serif text-2xl font-bold text-primary mb-8">Contact Information</h3>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start gap-4 text-foreground/80">
                     <Mail className="text-secondary shrink-0 mt-1" />
                     <div>
                       <p className="font-bold text-primary mb-1">Email</p>
-                      <a href="mailto:hello@withlovefromjesus.org" className="hover:text-secondary transition-colors">
+                      <a href="mailto:hello@withlovefromjesus.org" className="hover:text-accent transition-colors">
                         hello@withlovefromjesus.org
                       </a>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-4 text-foreground/80">
                     <Phone className="text-secondary shrink-0 mt-1" />
                     <div>
@@ -59,14 +58,14 @@ export default function Contact() {
                       <p>+1 (555) 123-4567</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-4 text-foreground/80">
                     <MapPin className="text-secondary shrink-0 mt-1" />
                     <div>
                       <p className="font-bold text-primary mb-1">Headquarters</p>
                       <p className="leading-relaxed">
-                        123 Mission Way<br/>
-                        Community District<br/>
+                        123 Mission Way<br />
+                        Community District<br />
                         City, State 12345
                       </p>
                     </div>
@@ -88,30 +87,33 @@ export default function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label htmlFor="name" className="text-sm font-bold text-primary">Full Name</label>
-                      <input 
-                        type="text" 
-                        id="name" 
+                      <input
+                        type="text"
+                        id="name"
                         required
+                        data-testid="input-name"
                         className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-sans text-foreground"
-                        placeholder="John Doe"
+                        placeholder="Your full name"
                       />
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="email" className="text-sm font-bold text-primary">Email Address</label>
-                      <input 
-                        type="email" 
-                        id="email" 
+                      <input
+                        type="email"
+                        id="email"
                         required
+                        data-testid="input-email"
                         className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-sans text-foreground"
-                        placeholder="john@example.com"
+                        placeholder="your@email.com"
                       />
                     </div>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <label htmlFor="subject" className="text-sm font-bold text-primary">Subject</label>
-                    <select 
-                      id="subject" 
+                    <select
+                      id="subject"
+                      data-testid="select-subject"
                       className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-sans text-foreground"
                     >
                       <option value="general">General Inquiry</option>
@@ -123,19 +125,21 @@ export default function Contact() {
 
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-sm font-bold text-primary">Message</label>
-                    <textarea 
-                      id="message" 
+                    <textarea
+                      id="message"
                       rows={5}
                       required
+                      data-testid="textarea-message"
                       className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-sans text-foreground resize-none"
                       placeholder="How would you like to connect?"
                     ></textarea>
                   </div>
 
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-primary text-primary-foreground py-4 rounded-xl font-bold text-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                    data-testid="button-submit"
+                    className="w-full bg-primary text-primary-foreground py-4 rounded-xl font-bold text-lg hover:bg-accent transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? "Sending..." : "Send Message"} <Send size={20} />
                   </button>

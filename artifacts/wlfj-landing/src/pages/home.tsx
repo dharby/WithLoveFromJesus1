@@ -27,7 +27,7 @@ const slides = [
     src: heroSlide3,
     alt: "A young girl with a steadfast look",
     headline: ["See the child.", "Change the world."],
-    sub: "Scholarships, supplies, health support — real interventions that reach the children who need them most.",
+    sub: "Scholarships, supplies, health support. Real interventions that reach the children who need them most.",
   },
 ];
 
@@ -49,21 +49,17 @@ const imageVariants = {
 
 export default function Home() {
   const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState(1);
-
-  const goTo = useCallback((idx: number) => {
-    setDirection(idx > current ? 1 : -1);
-    setCurrent(idx);
-  }, [current]);
 
   const next = useCallback(() => {
-    setDirection(1);
     setCurrent((c) => (c + 1) % slides.length);
   }, []);
 
   const prev = useCallback(() => {
-    setDirection(-1);
     setCurrent((c) => (c - 1 + slides.length) % slides.length);
+  }, []);
+
+  const goTo = useCallback((idx: number) => {
+    setCurrent(idx);
   }, []);
 
   useEffect(() => {
@@ -78,7 +74,7 @@ export default function Home() {
       {/* Hero Slideshow */}
       <section
         data-testid="section-hero"
-        className="relative min-h-screen flex items-center overflow-hidden bg-foreground"
+        className="relative min-h-screen flex items-center overflow-hidden bg-foreground pt-16"
       >
         {/* Background image crossfade */}
         <AnimatePresence mode="sync">
@@ -100,7 +96,7 @@ export default function Home() {
         </AnimatePresence>
 
         {/* Text content */}
-        <div className="container mx-auto px-4 md:px-16 relative z-20 py-32">
+        <div className="container mx-auto px-4 md:px-16 relative z-20 py-24">
           <div className="max-w-3xl">
             <AnimatePresence mode="wait">
               <motion.div key={`text-${current}`} className="space-y-6">
@@ -147,7 +143,7 @@ export default function Home() {
                   <Link
                     href="/contact"
                     data-testid="link-hero-join"
-                    className="bg-primary text-primary-foreground px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary/90 transition-all hover:-translate-y-1 hover:shadow-lg inline-flex items-center gap-2"
+                    className="bg-primary text-primary-foreground px-8 py-4 rounded-full text-lg font-semibold hover:bg-accent transition-all hover:-translate-y-1 hover:shadow-lg inline-flex items-center gap-2"
                   >
                     Join Our Mission <ArrowRight size={20} />
                   </Link>
@@ -202,7 +198,7 @@ export default function Home() {
         </div>
 
         {/* Slide counter */}
-        <div className="absolute top-8 right-8 z-20 text-white/50 text-sm font-mono tracking-widest select-none">
+        <div className="absolute top-20 right-8 z-20 text-white/50 text-sm font-mono tracking-widest select-none">
           {String(current + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
         </div>
       </section>
@@ -245,7 +241,7 @@ export default function Home() {
                     <div className="w-16 h-16 bg-secondary/20 rounded-2xl flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
                       <BookOpen size={32} />
                     </div>
-                    <h3 className="text-3xl font-serif font-bold text-primary mb-4 group-hover:text-secondary transition-colors">School Intervention</h3>
+                    <h3 className="text-3xl font-serif font-bold text-primary mb-4 group-hover:text-accent transition-colors">School Intervention</h3>
                     <p className="text-foreground/70 font-sans text-lg mb-8 leading-relaxed">
                       Transforming life trajectories through primary and secondary education scholarships, school supplies, and continuous mentorship.
                     </p>
@@ -297,10 +293,10 @@ export default function Home() {
                   We believe that every child deserves the dignity of an education, and every mother deserves the safety of proper healthcare.
                 </p>
                 <p>
-                  In the communities we serve, a simple scholarship isn't just about books—it's about breaking a cycle. An antenatal visit isn't just a checkup—it's a profound statement that a mother's life matters.
+                  In the communities we serve, a simple scholarship is not just about books. It is about breaking a cycle. An antenatal visit is not just a checkup. It is a profound statement that a mother's life matters.
                 </p>
                 <p className="font-serif text-2xl text-accent italic mt-8 border-l-4 border-secondary pl-6 py-2">
-                  "This work isn't charity. It's love made visible."
+                  "This work is not charity. It is love made visible."
                 </p>
               </div>
             </FadeIn>
@@ -321,7 +317,7 @@ export default function Home() {
             <Link
               href="/contact"
               data-testid="link-cta-get-involved"
-              className="bg-accent text-white px-10 py-5 rounded-full text-xl font-bold hover:bg-accent/90 transition-all hover:shadow-xl hover:-translate-y-1 inline-flex items-center gap-3"
+              className="bg-accent text-accent-foreground px-10 py-5 rounded-full text-xl font-bold hover:bg-primary transition-all hover:shadow-xl hover:-translate-y-1 inline-flex items-center gap-3"
             >
               Get Involved Today <ArrowRight size={24} />
             </Link>

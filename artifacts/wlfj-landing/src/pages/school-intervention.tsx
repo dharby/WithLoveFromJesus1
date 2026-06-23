@@ -6,7 +6,7 @@ import school2 from "@/assets/images/school-2.png";
 
 export default function SchoolIntervention() {
   return (
-    <main className="w-full pt-20">
+    <main className="w-full pt-16">
       {/* Header */}
       <section className="py-20 md:py-32 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent pointer-events-none"></div>
@@ -19,7 +19,7 @@ export default function SchoolIntervention() {
               Empowering the <span className="text-secondary italic">next generation.</span>
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/80 font-sans leading-relaxed">
-              We provide scholarships, supplies, and support for primary and secondary education—because education changes everything.
+              We provide scholarships, supplies, and support for primary and secondary education because education changes everything.
             </p>
           </FadeIn>
         </div>
@@ -35,12 +35,12 @@ export default function SchoolIntervention() {
                 In many developing communities, the cost of basic schooling forces children out of the classroom and into early labor. Our School Intervention program is built to bridge that gap.
               </p>
               <p>
-                By covering tuition, providing essential learning materials, and offering ongoing mentorship, we ensure that financial hardship doesn't dictate a child's potential. We partner with local schools to identify students at highest risk of dropping out.
+                By covering tuition, providing essential learning materials, and offering ongoing mentorship, we ensure that financial hardship does not dictate a child's potential. We partner with local schools to identify students at highest risk of dropping out.
               </p>
             </FadeIn>
             <FadeIn direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-square md:aspect-[4/3]">
-                <img src={school1} alt="Sunlit classroom" className="w-full h-full object-cover" />
+                <img src={school1} alt="Children in classroom" className="w-full h-full object-cover" />
               </div>
             </FadeIn>
           </div>
@@ -81,7 +81,7 @@ export default function SchoolIntervention() {
               </div>
               <h3 className="text-2xl font-serif font-bold text-primary mb-4">Mentorship</h3>
               <p className="text-foreground/70 font-sans leading-relaxed">
-                Academic tracking and emotional support. We don't just pay fees; we walk alongside our students throughout their journey.
+                Academic tracking and emotional support. We do not just pay fees. We walk alongside our students throughout their journey.
               </p>
             </StaggerItem>
           </StaggerContainer>
@@ -100,11 +100,11 @@ export default function SchoolIntervention() {
             <FadeIn direction="left" className="order-1 lg:order-2 space-y-6 text-lg text-foreground/80 font-sans leading-relaxed">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">The ripple effect of a single book.</h2>
               <p>
-                When a child learns to read, write, and think critically, they don't just change their own future. They uplift their family, contribute to their community, and break generational cycles of poverty.
+                When a child learns to read, write, and think critically, they do not just change their own future. They uplift their family, contribute to their community, and break generational cycles of poverty.
               </p>
               <div className="bg-secondary/10 border border-secondary/30 p-6 rounded-xl mt-8">
-                <p className="font-serif italic text-xl text-primary mb-2">"Before the scholarship, I worked in the market during school hours. Now, I am top of my class in science."</p>
-                <span className="text-sm font-bold text-secondary uppercase tracking-widest">— Secondary Student, Program Beneficiary</span>
+                <p className="font-serif italic text-xl text-primary mb-2">"Before the scholarship, I worked in the market during school hours. Now I am top of my class in science."</p>
+                <span className="text-sm font-bold text-accent uppercase tracking-widest">Secondary Student, Program Beneficiary</span>
               </div>
             </FadeIn>
           </div>
@@ -119,9 +119,9 @@ export default function SchoolIntervention() {
             <p className="text-xl text-primary-foreground/80 font-sans mb-10 leading-relaxed">
               Your partnership can keep a child in the classroom. Reach out to learn how you can sponsor a student or donate supplies.
             </p>
-            <Link 
-              href="/contact" 
-              className="bg-secondary text-primary px-10 py-5 rounded-full text-xl font-bold hover:bg-secondary/90 transition-all hover:shadow-xl hover:-translate-y-1 inline-flex items-center gap-3"
+            <Link
+              href="/contact"
+              className="bg-secondary text-foreground px-10 py-5 rounded-full text-xl font-bold hover:bg-secondary/90 transition-all hover:shadow-xl hover:-translate-y-1 inline-flex items-center gap-3"
             >
               Support a Student <ArrowRight size={24} />
             </Link>

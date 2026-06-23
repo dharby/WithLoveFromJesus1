@@ -30,17 +30,24 @@ export function Navbar() {
 
   return (
     <>
-      {/* Floating trigger button */}
-      <button
-        data-testid="button-open-nav"
-        onClick={() => setOpen(true)}
-        aria-label="Open navigation menu"
-        className={`fixed top-5 left-5 z-50 w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${
-          open ? "opacity-0 pointer-events-none scale-90" : "opacity-100 scale-100"
-        } bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-xl hover:scale-105`}
-      >
-        <Menu size={22} />
-      </button>
+      {/* Top bar: logo left, hamburger right */}
+      <header className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 py-4 bg-background/90 backdrop-blur-md border-b border-border/40 shadow-sm">
+        <Link href="/" data-testid="link-logo" className="flex flex-col leading-tight group">
+          <span className="font-serif text-xl font-bold text-primary tracking-tight group-hover:text-accent transition-colors">
+            With Love
+          </span>
+          <span className="font-serif text-sm italic text-secondary">from Jesus</span>
+        </Link>
+
+        <button
+          data-testid="button-open-nav"
+          onClick={() => setOpen(true)}
+          aria-label="Open navigation menu"
+          className="w-11 h-11 rounded-full flex items-center justify-center bg-primary text-primary-foreground hover:bg-accent transition-all duration-200 hover:shadow-lg hover:scale-105"
+        >
+          <Menu size={20} />
+        </button>
+      </header>
 
       {/* Backdrop */}
       <AnimatePresence>
@@ -57,27 +64,27 @@ export function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* Sidebar Panel */}
+      {/* Right Sidebar Panel */}
       <AnimatePresence>
         {open && (
           <motion.aside
             key="sidebar"
-            initial={{ x: "-100%" }}
+            initial={{ x: "100%" }}
             animate={{ x: 0 }}
-            exit={{ x: "-100%" }}
+            exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="fixed top-0 left-0 h-full w-[320px] max-w-[85vw] z-50 bg-background shadow-2xl flex flex-col overflow-hidden"
+            className="fixed top-0 right-0 h-full w-[300px] max-w-[85vw] z-50 bg-background shadow-2xl flex flex-col overflow-hidden"
           >
-            {/* Header */}
-            <div className="flex items-center justify-between px-8 py-7 border-b border-border/60">
+            {/* Sidebar header */}
+            <div className="flex items-center justify-between px-7 py-6 border-b border-border/60">
               <Link href="/" className="flex flex-col leading-tight">
-                <span className="font-serif text-xl font-bold text-primary tracking-tight">With Love</span>
-                <span className="font-serif text-base italic text-secondary">from Jesus</span>
+                <span className="font-serif text-lg font-bold text-primary">With Love</span>
+                <span className="font-serif text-sm italic text-secondary">from Jesus</span>
               </Link>
               <button
                 data-testid="button-close-nav"
                 onClick={() => setOpen(false)}
-                className="w-9 h-9 rounded-full flex items-center justify-center text-foreground/60 hover:text-foreground hover:bg-muted transition-colors"
+                className="w-9 h-9 rounded-full flex items-center justify-center text-foreground/50 hover:text-foreground hover:bg-muted transition-colors"
                 aria-label="Close navigation"
               >
                 <X size={20} />
@@ -85,14 +92,14 @@ export function Navbar() {
             </div>
 
             {/* Nav Links */}
-            <nav className="flex-1 px-6 py-8 flex flex-col gap-1">
+            <nav className="flex-1 px-5 py-7 flex flex-col gap-1">
               {navLinks.map((link, i) => {
                 const Icon = link.icon;
                 const isActive = location === link.href;
                 return (
                   <motion.div
                     key={link.href}
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.05 * i + 0.1, duration: 0.3 }}
                   >
@@ -106,7 +113,9 @@ export function Navbar() {
                       }`}
                     >
                       <span className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors ${
-                        isActive ? "bg-primary-foreground/20 text-primary-foreground" : "bg-muted text-foreground/50 group-hover:bg-primary/10 group-hover:text-primary"
+                        isActive
+                          ? "bg-primary-foreground/20 text-primary-foreground"
+                          : "bg-muted text-foreground/50 group-hover:bg-primary/10 group-hover:text-primary"
                       }`}>
                         <Icon size={18} />
                       </span>
@@ -127,12 +136,12 @@ export function Navbar() {
               <Link
                 href="/contact"
                 data-testid="link-nav-get-involved"
-                className="flex items-center justify-center gap-2 w-full bg-accent text-white px-6 py-3.5 rounded-xl text-base font-semibold hover:bg-accent/90 transition-all hover:shadow-lg"
+                className="flex items-center justify-center gap-2 w-full bg-accent text-accent-foreground px-6 py-3.5 rounded-xl text-base font-semibold hover:bg-accent/90 transition-all hover:shadow-lg"
               >
                 Get Involved <ArrowRight size={18} />
               </Link>
               <p className="text-xs text-foreground/40 text-center mt-4 font-sans leading-relaxed">
-                Serving children & mothers<br />through education & health
+                Serving children and mothers<br />through education and health
               </p>
             </motion.div>
           </motion.aside>
