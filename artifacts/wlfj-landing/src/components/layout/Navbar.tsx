@@ -34,7 +34,7 @@ export function Navbar() {
       {/* Top bar: logo left, hamburger right */}
       <header className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 py-4 bg-background/90 backdrop-blur-md border-b border-border/40 shadow-sm">
         <Link href="/" data-testid="link-logo" className="flex items-center group">
-          <img src={logoSrc} alt="With Love from Jesus" className="h-12 w-auto object-contain transition-opacity group-hover:opacity-85" />
+          <img src={logoSrc} alt="With Love from Jesus" className="h-20 w-auto object-contain transition-opacity group-hover:opacity-85" />
         </Link>
 
         <button

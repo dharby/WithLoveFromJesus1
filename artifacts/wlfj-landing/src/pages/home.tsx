@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import heroMain from "@assets/annie-spratt-cVEOh_JJmEE-unsplash_1782214846278.jpg";
 import heroSlide2 from "@assets/jeffrey-riley-dsN1oZVba48-unsplash_1782214846277.jpg";
 import heroSlide3 from "@assets/joshua-oluwagbemiga-Jq0coU4cdFE-unsplash_1782214846277.jpg";
-import homeImpact from "@/assets/images/home-impact.png";
+import homeImpact from "@/assets/images/kids-playing.png";
 
 const slides = [
   {

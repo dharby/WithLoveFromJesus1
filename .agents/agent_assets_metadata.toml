@@ -36,3 +36,39 @@ id = "nmI9mzP6q6VM87FAOAjkP"
 uri = "file://artifacts/wlfj-landing/src/assets/images/health-2.png"
 type = "image"
 title = "Mother holding newborn baby"
+
+[[generated]]
+id = "mEwA2vczZruCzrIoKvOIE"
+uri = "file://attached_assets/generated_images/documentary_photograph_of_an_cbad.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "2dlQ79DAKMsrxdTsHG32r"
+uri = "file://attached_assets/generated_images/documentary_photograph_of_nigerian_42a5.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "NFv5d5adDJia8MW5XfaxX"
+uri = "file://attached_assets/generated_images/documentary_photograph_of_a_75e7.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "MFfLLe1Fz-trTLr8HnzA2"
+uri = "file://artifacts/wlfj-landing/src/assets/images/kids-playing.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "C_3KY3rH6_4nER9qpLSJp"
+uri = "file://artifacts/wlfj-landing/src/assets/images/mother-baby.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "dJ59SGQnvfzMydGRxwHFZ"
+uri = "file://artifacts/wlfj-landing/src/assets/images/child-reading.png"
+type = "image"
+title = "generated_image"
