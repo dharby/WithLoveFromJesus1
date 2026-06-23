@@ -1,7 +1,11 @@
 import { FadeIn } from "@/components/ui/fade-in";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Send, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+
+const PHONE = "07085427040";
+const PHONE_INTL = "2347085427040";
+const EMAIL = "Withlovefromjesus.ng@gmail.com";
 
 export default function Contact() {
   const { toast } = useToast();
@@ -11,14 +15,26 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
+    const form = e.target as HTMLFormElement;
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const subjectEl = form.elements.namedItem("subject") as HTMLSelectElement;
+    const subject = subjectEl.options[subjectEl.selectedIndex].text;
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+
+    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    const mailtoLink = `mailto:${EMAIL}?subject=${encodeURIComponent(subject + " — from " + name)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoLink;
+
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
-        title: "Message Sent",
-        description: "Thank you for reaching out. We will get back to you shortly.",
+        title: "Opening your email client",
+        description: "Your message has been pre-filled and is ready to send.",
       });
-      (e.target as HTMLFormElement).reset();
-    }, 1000);
+      form.reset();
+    }, 800);
   };
 
   return (
@@ -34,6 +50,28 @@ export default function Contact() {
             </p>
           </FadeIn>
 
+          {/* Quick Contact Buttons */}
+          <FadeIn className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <a
+              href={`tel:${PHONE}`}
+              data-testid="link-call"
+              className="flex items-center justify-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-full text-lg font-semibold hover:bg-accent transition-all hover:-translate-y-1 hover:shadow-lg"
+            >
+              <Phone size={22} />
+              Call Us
+            </a>
+            <a
+              href={`https://wa.me/${PHONE_INTL}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="link-whatsapp"
+              className="flex items-center justify-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#1ebe5d] transition-all hover:-translate-y-1 hover:shadow-lg"
+            >
+              <MessageCircle size={22} />
+              WhatsApp Us
+            </a>
+          </FadeIn>
+
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
             {/* Contact Info */}
             <FadeIn direction="right" className="lg:col-span-2 space-y-8">
@@ -45,8 +83,8 @@ export default function Contact() {
                     <Mail className="text-secondary shrink-0 mt-1" />
                     <div>
                       <p className="font-bold text-primary mb-1">Email</p>
-                      <a href="mailto:hello@withlovefromjesus.org" className="hover:text-accent transition-colors">
-                        hello@withlovefromjesus.org
+                      <a href={`mailto:${EMAIL}`} className="hover:text-accent transition-colors break-all">
+                        {EMAIL}
                       </a>
                     </div>
                   </div>
@@ -54,19 +92,33 @@ export default function Contact() {
                   <div className="flex items-start gap-4 text-foreground/80">
                     <Phone className="text-secondary shrink-0 mt-1" />
                     <div>
-                      <p className="font-bold text-primary mb-1">Phone</p>
-                      <p>+1 (555) 123-4567</p>
+                      <p className="font-bold text-primary mb-1">Phone / WhatsApp</p>
+                      <div className="flex flex-col gap-2 mt-1">
+                        <a
+                          href={`tel:${PHONE}`}
+                          className="inline-flex items-center gap-2 text-primary font-semibold hover:text-accent transition-colors"
+                        >
+                          <Phone size={15} /> {PHONE}
+                        </a>
+                        <a
+                          href={`https://wa.me/${PHONE_INTL}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-[#25D366] font-semibold hover:opacity-80 transition-opacity"
+                        >
+                          <MessageCircle size={15} /> WhatsApp: {PHONE}
+                        </a>
+                      </div>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4 text-foreground/80">
                     <MapPin className="text-secondary shrink-0 mt-1" />
                     <div>
-                      <p className="font-bold text-primary mb-1">Headquarters</p>
+                      <p className="font-bold text-primary mb-1">Location</p>
                       <p className="leading-relaxed">
-                        123 Mission Way<br />
-                        Community District<br />
-                        City, State 12345
+                        Ado-Ekiti, Ekiti State<br />
+                        Nigeria
                       </p>
                     </div>
                   </div>
@@ -83,6 +135,7 @@ export default function Contact() {
             {/* Contact Form */}
             <FadeIn direction="left" delay={0.2} className="lg:col-span-3">
               <div className="bg-card p-8 md:p-10 rounded-2xl border border-border shadow-lg">
+                <h3 className="font-serif text-xl font-bold text-primary mb-6">Send a Message</h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
@@ -90,6 +143,7 @@ export default function Contact() {
                       <input
                         type="text"
                         id="name"
+                        name="name"
                         required
                         data-testid="input-name"
                         className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-sans text-foreground"
@@ -101,6 +155,7 @@ export default function Contact() {
                       <input
                         type="email"
                         id="email"
+                        name="email"
                         required
                         data-testid="input-email"
                         className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-sans text-foreground"
@@ -113,6 +168,7 @@ export default function Contact() {
                     <label htmlFor="subject" className="text-sm font-bold text-primary">Subject</label>
                     <select
                       id="subject"
+                      name="subject"
                       data-testid="select-subject"
                       className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-sans text-foreground"
                     >
@@ -120,6 +176,7 @@ export default function Contact() {
                       <option value="sponsor">Sponsor a Student</option>
                       <option value="health">Support Maternal Health</option>
                       <option value="volunteer">Volunteer</option>
+                      <option value="donate">Donate Supplies</option>
                     </select>
                   </div>
 
@@ -127,6 +184,7 @@ export default function Contact() {
                     <label htmlFor="message" className="text-sm font-bold text-primary">Message</label>
                     <textarea
                       id="message"
+                      name="message"
                       rows={5}
                       required
                       data-testid="textarea-message"
@@ -141,8 +199,12 @@ export default function Contact() {
                     data-testid="button-submit"
                     className="w-full bg-primary text-primary-foreground py-4 rounded-xl font-bold text-lg hover:bg-accent transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    {isSubmitting ? "Sending..." : "Send Message"} <Send size={20} />
+                    {isSubmitting ? "Opening email client..." : "Send a Message"} <Send size={20} />
                   </button>
+
+                  <p className="text-xs text-foreground/50 text-center font-sans">
+                    Clicking "Send a Message" will open your email app with this message pre-filled, ready to send to {EMAIL}
+                  </p>
                 </form>
               </div>
             </FadeIn>

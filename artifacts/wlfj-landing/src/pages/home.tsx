@@ -8,6 +8,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import heroMain from "@assets/annie-spratt-cVEOh_JJmEE-unsplash_1782214846278.jpg";
 import heroSlide2 from "@assets/jeffrey-riley-dsN1oZVba48-unsplash_1782214846277.jpg";
 import heroSlide3 from "@assets/joshua-oluwagbemiga-Jq0coU4cdFE-unsplash_1782214846277.jpg";
+import heroSlide4 from "@assets/doug-linstedt-jEEYZsaxbH4-unsplash_1782246534743.jpg";
+import heroSlide5 from "@assets/fatima-yusuf-9gj4I78mcoM-unsplash_1782246534745.jpg";
 import homeImpact from "@/assets/images/kids-playing.png";
 
 const slides = [
@@ -16,6 +18,18 @@ const slides = [
     alt: "Joyful children gathered together",
     headline: ["Where hope is made", "tangible."],
     sub: "A social intervention NGO serving children through education and supporting new mothers through maternal health programs.",
+  },
+  {
+    src: heroSlide4,
+    alt: "Students attentively learning in a Nigerian classroom",
+    headline: ["Every classroom", "is a doorway."],
+    sub: "Primary and secondary students in Ado-Ekiti receive the scholarships and supplies they need to keep learning, keep growing.",
+  },
+  {
+    src: heroSlide5,
+    alt: "A young African mother holding her newborn baby",
+    headline: ["A mother's life", "matters deeply."],
+    sub: "Our antenatal outreach brings healthcare directly to remote communities, so no mother faces pregnancy alone.",
   },
   {
     src: heroSlide2,
@@ -76,7 +90,6 @@ export default function Home() {
         data-testid="section-hero"
         className="relative min-h-screen flex items-center overflow-hidden bg-foreground pt-16"
       >
-        {/* Background image crossfade */}
         <AnimatePresence mode="sync">
           <motion.div
             key={`bg-${current}`}
@@ -95,7 +108,6 @@ export default function Home() {
           </motion.div>
         </AnimatePresence>
 
-        {/* Text content */}
         <div className="container mx-auto px-4 md:px-16 relative z-20 py-24">
           <div className="max-w-3xl">
             <AnimatePresence mode="wait">
@@ -197,7 +209,6 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Slide counter */}
         <div className="absolute top-20 right-8 z-20 text-white/50 text-sm font-mono tracking-widest select-none">
           {String(current + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
         </div>
@@ -281,7 +292,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeIn direction="right">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
-                <img src={homeImpact} alt="Joyful children" className="w-full h-full object-cover" />
+                <img src={homeImpact} alt="Nigerian children playing" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-primary/10"></div>
               </div>
             </FadeIn>
