@@ -2,6 +2,7 @@ import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
 import { Menu, X, Home, GraduationCap, HeartPulse, HelpCircle, Mail, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoSrc from "@/assets/logo.png";
 
 const navLinks = [
   { href: "/", label: "Home", icon: Home },
@@ -32,11 +33,8 @@ export function Navbar() {
     <>
       {/* Top bar: logo left, hamburger right */}
       <header className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 py-4 bg-background/90 backdrop-blur-md border-b border-border/40 shadow-sm">
-        <Link href="/" data-testid="link-logo" className="flex flex-col leading-tight group">
-          <span className="font-serif text-xl font-bold text-primary tracking-tight group-hover:text-accent transition-colors">
-            With Love
-          </span>
-          <span className="font-serif text-sm italic text-secondary">from Jesus</span>
+        <Link href="/" data-testid="link-logo" className="flex items-center group">
+          <img src={logoSrc} alt="With Love from Jesus" className="h-12 w-auto object-contain transition-opacity group-hover:opacity-85" />
         </Link>
 
         <button
@@ -77,9 +75,8 @@ export function Navbar() {
           >
             {/* Sidebar header */}
             <div className="flex items-center justify-between px-7 py-6 border-b border-border/60">
-              <Link href="/" className="flex flex-col leading-tight">
-                <span className="font-serif text-lg font-bold text-primary">With Love</span>
-                <span className="font-serif text-sm italic text-secondary">from Jesus</span>
+              <Link href="/" className="flex items-center">
+                <img src={logoSrc} alt="With Love from Jesus" className="h-11 w-auto object-contain" />
               </Link>
               <button
                 data-testid="button-close-nav"
