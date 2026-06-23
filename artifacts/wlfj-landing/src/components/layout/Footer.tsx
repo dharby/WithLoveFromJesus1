@@ -9,9 +9,7 @@ export function Footer() {
             <h3 className="font-serif text-3xl font-bold mb-4">
               With Love <span className="text-secondary italic">from Jesus</span>
             </h3>
-            <p className="text-primary-foreground/80 max-w-md text-lg leading-relaxed font-sans mb-8">
-              A place where hope is made tangible. We serve children through education and support pregnant and new mothers through maternal healthcare — because every life is deeply valued.
-            </p>
+            <p className="text-primary-foreground/80 max-w-md text-lg leading-relaxed font-sans mb-8">A place where hope is made tangible. We serve children through education and support pregnant and new mothers through maternal healthcare,because every life is deeply valued.</p>
           </div>
           
           <div>
@@ -43,8 +41,8 @@ export function Footer() {
                   Contact Us
                 </Link>
               </li>
-              <li>hello@withlovefromjesus.org</li>
-              <li>+1 (555) 123-4567</li>
+              <li>Withlovefromjesus.ng@gmail.com</li>
+              <li>+234 708 542 7040</li>
             </ul>
           </div>
         </div>
