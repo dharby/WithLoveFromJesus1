@@ -181,7 +181,6 @@ export default function Home() {
           {String(current + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
         </div>
       </section>
-
       {/* Impact Counters */}
       <section className="py-20 bg-primary text-primary-foreground" data-testid="section-impact">
         <div className="container mx-auto px-4 md:px-6">
@@ -201,7 +200,6 @@ export default function Home() {
           </StaggerContainer>
         </div>
       </section>
-
       {/* Our Approach */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
@@ -236,9 +234,7 @@ export default function Home() {
                 <Users size={32} />
               </div>
               <h3 className="text-xl font-serif font-bold text-primary mb-3">Community-Centred</h3>
-              <p className="text-foreground/70 font-sans leading-relaxed">
-                We begin by listening. Every intervention is co-designed with community input — responsive to local realities, culture, and the priorities of the people we serve.
-              </p>
+              <p className="text-foreground/70 font-sans leading-relaxed">We begin by listening. Every intervention is co-designed with community input, responsive to local realities, culture, and the priorities of the people we serve.</p>
             </StaggerItem>
           </StaggerContainer>
 
@@ -279,7 +275,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-3xl font-serif font-bold text-primary mb-4 group-hover:text-accent transition-colors">Health Intervention</h3>
                     <p className="text-foreground/70 font-sans text-lg mb-8 leading-relaxed">
-                      We develop health interventions that improve access to essential healthcare while promoting healthier communities — through health education, preventive care, medical outreach, and programs that address the social determinants of health.
+                      We develop health interventions that improve access to essential healthcare while promoting healthier communities through health education, preventive care, medical outreach, and programs that address the social determinants of health.
                     </p>
                     <div className="inline-flex items-center text-primary font-bold gap-2 group-hover:gap-4 transition-all">
                       Explore Program <ArrowRight size={20} />
@@ -291,7 +287,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Vision & Mission */}
       <section className="py-24 bg-muted overflow-hidden relative">
         <div className="container mx-auto px-4 md:px-6">
@@ -307,7 +302,7 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-8">Our Vision</h2>
               <div className="space-y-6 text-lg text-foreground/80 font-sans leading-relaxed">
                 <p>
-                  We envision communities where every individual — regardless of socioeconomic background — has access to the education, healthcare, and opportunities they need to thrive.
+                  We envision communities where every individual — regardless of socioeconomic background has access to the education, healthcare, and opportunities they need to thrive.
                 </p>
                 <p>
                   Starting in Nigeria, our mission is to grow across Africa. We believe that meaningful, lasting change is achieved by addressing the structural barriers that limit people's ability to learn, stay healthy, and reach their full potential.
@@ -323,7 +318,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Who We Serve */}
       <section className="py-24 bg-background border-t border-border">
         <div className="container mx-auto px-4 md:px-6 text-center max-w-4xl">
@@ -347,7 +341,6 @@ export default function Home() {
           </FadeIn>
         </div>
       </section>
-
       {/* CTA */}
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 md:px-6 text-center max-w-4xl">
