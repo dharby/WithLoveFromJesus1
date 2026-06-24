@@ -9,15 +9,20 @@ export function Footer() {
             <h3 className="font-serif text-3xl font-bold mb-4">
               With Love <span className="text-secondary italic">from Jesus</span>
             </h3>
-            <p className="text-primary-foreground/80 max-w-md text-lg leading-relaxed font-sans mb-8">A place where hope is made tangible. We serve children through education and support pregnant and new mothers through maternal healthcare,because every life is deeply valued.</p>
+            <p className="text-primary-foreground/80 max-w-md text-lg leading-relaxed font-sans mb-4">
+              An evidence-informed, impact-driven nonprofit designing and delivering education and health interventions to reduce poverty and expand opportunity in underserved communities.
+            </p>
+            <p className="text-primary-foreground/60 font-sans text-sm">
+              Based in Ado-Ekiti, Ekiti State, Nigeria. Working toward a healthier, more educated Africa.
+            </p>
           </div>
-          
+
           <div>
             <h4 className="font-serif text-xl font-semibold mb-6 text-secondary">Programs</h4>
             <ul className="space-y-4 font-sans">
               <li>
                 <Link href="/school-intervention" className="text-primary-foreground/80 hover:text-white transition-colors">
-                  School Intervention
+                  Education Intervention
                 </Link>
               </li>
               <li>
@@ -32,7 +37,7 @@ export function Footer() {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-serif text-xl font-semibold mb-6 text-secondary">Connect</h4>
             <ul className="space-y-4 font-sans text-primary-foreground/80">
@@ -41,12 +46,20 @@ export function Footer() {
                   Contact Us
                 </Link>
               </li>
-              <li>Withlovefromjesus.ng@gmail.com</li>
-              <li>+234 708 542 7040</li>
+              <li>
+                <a href="mailto:Withlovefromjesus.ng@gmail.com" className="hover:text-white transition-colors break-all">
+                  Withlovefromjesus.ng@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:07085427040" className="hover:text-white transition-colors">
+                  07085427040
+                </a>
+              </li>
             </ul>
           </div>
         </div>
-        
+
         <div className="mt-16 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60 font-sans">
           <p>© {new Date().getFullYear()} With Love from Jesus. All rights reserved.</p>
           <div className="flex gap-6">

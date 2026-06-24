@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/fade-in";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { Link } from "wouter";
-import { ArrowRight, BookOpen, HeartPulse, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, BookOpen, HeartPulse, ChevronLeft, ChevronRight, Target, TrendingUp, Users } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import heroMain from "@assets/annie-spratt-cVEOh_JJmEE-unsplash_1782214846278.jpg";
@@ -15,33 +15,33 @@ import homeImpact from "@/assets/images/kids-playing.png";
 const slides = [
   {
     src: heroMain,
-    alt: "Joyful children gathered together",
-    headline: ["Where hope is made", "tangible."],
-    sub: "A social intervention NGO serving children through education and supporting new mothers through maternal health programs.",
+    alt: "Children in an underserved Nigerian community",
+    headline: ["Reducing poverty.", "Expanding opportunity."],
+    sub: "WLFJ designs and delivers evidence-informed education and health interventions for underserved communities across Nigeria and Africa.",
   },
   {
     src: heroSlide4,
     alt: "Students attentively learning in a Nigerian classroom",
-    headline: ["Every classroom", "is a doorway."],
-    sub: "Primary and secondary students in Ado-Ekiti receive the scholarships and supplies they need to keep learning, keep growing.",
+    headline: ["Education removes", "structural barriers."],
+    sub: "We remove the financial and systemic obstacles that prevent children from accessing quality education — through scholarships, resources, and ongoing mentorship.",
   },
   {
     src: heroSlide5,
     alt: "A young African mother holding her newborn baby",
-    headline: ["A mother's life", "matters deeply."],
-    sub: "Our antenatal outreach brings healthcare directly to remote communities, so no mother faces pregnancy alone.",
+    headline: ["Health is a", "pathway out of poverty."],
+    sub: "Our health interventions improve access to essential care, promote healthier communities, and address the social determinants that keep families trapped in hardship.",
   },
   {
     src: heroSlide2,
-    alt: "A child's determined gaze",
-    headline: ["Every child", "deserves a future."],
-    sub: "We believe no financial barrier should stand between a child and the education that will change their life.",
+    alt: "A child with a determined gaze",
+    headline: ["Every child.", "Every opportunity."],
+    sub: "We believe that socioeconomic background should never determine a child's ability to learn, grow, and reach their full potential.",
   },
   {
     src: heroSlide3,
     alt: "A young girl with a steadfast look",
-    headline: ["See the child.", "Change the world."],
-    sub: "Scholarships, supplies, health support. Real interventions that reach the children who need them most.",
+    headline: ["Evidence-informed.", "Community-centred."],
+    sub: "Every program begins with understanding community needs. We measure outcomes, learn from our work, and continuously improve our effectiveness.",
   },
 ];
 
@@ -64,17 +64,9 @@ const imageVariants = {
 export default function Home() {
   const [current, setCurrent] = useState(0);
 
-  const next = useCallback(() => {
-    setCurrent((c) => (c + 1) % slides.length);
-  }, []);
-
-  const prev = useCallback(() => {
-    setCurrent((c) => (c - 1 + slides.length) % slides.length);
-  }, []);
-
-  const goTo = useCallback((idx: number) => {
-    setCurrent(idx);
-  }, []);
+  const next = useCallback(() => setCurrent((c) => (c + 1) % slides.length), []);
+  const prev = useCallback(() => setCurrent((c) => (c - 1 + slides.length) % slides.length), []);
+  const goTo = useCallback((idx: number) => setCurrent(idx), []);
 
   useEffect(() => {
     const timer = setInterval(next, 5500);
@@ -86,10 +78,7 @@ export default function Home() {
   return (
     <main className="w-full">
       {/* Hero Slideshow */}
-      <section
-        data-testid="section-hero"
-        className="relative min-h-screen flex items-center overflow-hidden bg-foreground pt-16"
-      >
+      <section data-testid="section-hero" className="relative min-h-screen flex items-center overflow-hidden bg-foreground pt-16">
         <AnimatePresence mode="sync">
           <motion.div
             key={`bg-${current}`}
@@ -99,11 +88,7 @@ export default function Home() {
             exit="exit"
             className="absolute inset-0 z-0"
           >
-            <img
-              src={slide.src}
-              alt={slide.alt}
-              className="w-full h-full object-cover object-center"
-            />
+            <img src={slide.src} alt={slide.alt} className="w-full h-full object-cover object-center" />
             <div className="absolute inset-0 bg-foreground/55" />
           </motion.div>
         </AnimatePresence>
@@ -157,7 +142,7 @@ export default function Home() {
                     data-testid="link-hero-join"
                     className="bg-primary text-primary-foreground px-8 py-4 rounded-full text-lg font-semibold hover:bg-accent transition-all hover:-translate-y-1 hover:shadow-lg inline-flex items-center gap-2"
                   >
-                    Join Our Mission <ArrowRight size={20} />
+                    Partner With Us <ArrowRight size={20} />
                   </Link>
                   <Link
                     href="/school-intervention"
@@ -174,37 +159,20 @@ export default function Home() {
 
         {/* Slide Controls */}
         <div className="absolute bottom-10 left-0 right-0 z-20 flex items-center justify-center gap-6">
-          <button
-            data-testid="button-hero-prev"
-            onClick={prev}
-            className="w-10 h-10 rounded-full bg-white/15 border border-white/20 text-white flex items-center justify-center hover:bg-white/25 transition-all"
-            aria-label="Previous slide"
-          >
+          <button onClick={prev} className="w-10 h-10 rounded-full bg-white/15 border border-white/20 text-white flex items-center justify-center hover:bg-white/25 transition-all" aria-label="Previous slide">
             <ChevronLeft size={20} />
           </button>
-
           <div className="flex gap-2 items-center">
             {slides.map((_, i) => (
               <button
                 key={i}
-                data-testid={`button-slide-dot-${i}`}
                 onClick={() => goTo(i)}
                 aria-label={`Go to slide ${i + 1}`}
-                className={`rounded-full transition-all duration-300 ${
-                  i === current
-                    ? "w-8 h-2.5 bg-secondary"
-                    : "w-2.5 h-2.5 bg-white/40 hover:bg-white/60"
-                }`}
+                className={`rounded-full transition-all duration-300 ${i === current ? "w-8 h-2.5 bg-secondary" : "w-2.5 h-2.5 bg-white/40 hover:bg-white/60"}`}
               />
             ))}
           </div>
-
-          <button
-            data-testid="button-hero-next"
-            onClick={next}
-            className="w-10 h-10 rounded-full bg-white/15 border border-white/20 text-white flex items-center justify-center hover:bg-white/25 transition-all"
-            aria-label="Next slide"
-          >
+          <button onClick={next} className="w-10 h-10 rounded-full bg-white/15 border border-white/20 text-white flex items-center justify-center hover:bg-white/25 transition-all" aria-label="Next slide">
             <ChevronRight size={20} />
           </button>
         </div>
@@ -220,27 +188,65 @@ export default function Home() {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-primary-foreground/20">
             <StaggerItem className="flex flex-col items-center justify-center p-6">
               <AnimatedCounter value={1250} suffix="+" className="text-5xl md:text-6xl font-serif font-bold text-secondary mb-2" />
-              <p className="text-lg font-sans text-primary-foreground/90 uppercase tracking-wider font-medium">Children Served</p>
+              <p className="text-lg font-sans text-primary-foreground/90 uppercase tracking-wider font-medium">Beneficiaries Reached</p>
             </StaggerItem>
             <StaggerItem className="flex flex-col items-center justify-center p-6">
               <AnimatedCounter value={450} className="text-5xl md:text-6xl font-serif font-bold text-secondary mb-2" />
-              <p className="text-lg font-sans text-primary-foreground/90 uppercase tracking-wider font-medium">Scholarships Given</p>
+              <p className="text-lg font-sans text-primary-foreground/90 uppercase tracking-wider font-medium">Students Supported</p>
             </StaggerItem>
             <StaggerItem className="flex flex-col items-center justify-center p-6">
               <AnimatedCounter value={890} suffix="+" className="text-5xl md:text-6xl font-serif font-bold text-secondary mb-2" />
-              <p className="text-lg font-sans text-primary-foreground/90 uppercase tracking-wider font-medium">Mothers Supported</p>
+              <p className="text-lg font-sans text-primary-foreground/90 uppercase tracking-wider font-medium">Health Interventions</p>
             </StaggerItem>
           </StaggerContainer>
         </div>
       </section>
 
-      {/* Programs Overview */}
+      {/* Our Approach */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <FadeIn className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Our Interventions</h2>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Our Approach</h2>
+            <p className="text-lg text-foreground/70 font-sans leading-relaxed">
+              We combine compassion with evidence — designing practical interventions that are measurable, sustainable, and responsive to the real needs of the communities we serve.
+            </p>
+          </FadeIn>
+
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <StaggerItem className="text-center p-8">
+              <div className="w-16 h-16 bg-secondary/15 rounded-2xl flex items-center justify-center text-secondary mx-auto mb-6">
+                <Target size={32} />
+              </div>
+              <h3 className="text-xl font-serif font-bold text-primary mb-3">Evidence-Informed</h3>
+              <p className="text-foreground/70 font-sans leading-relaxed">
+                Every program is designed with evidence at its core. We identify structural barriers, evaluate what works, and build interventions around proven approaches.
+              </p>
+            </StaggerItem>
+            <StaggerItem className="text-center p-8">
+              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mx-auto mb-6">
+                <TrendingUp size={32} />
+              </div>
+              <h3 className="text-xl font-serif font-bold text-primary mb-3">Outcome-Focused</h3>
+              <p className="text-foreground/70 font-sans leading-relaxed">
+                We measure what matters. Our programs track real outcomes — retention rates, health improvements, household-level change — so we can continuously improve.
+              </p>
+            </StaggerItem>
+            <StaggerItem className="text-center p-8">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mx-auto mb-6">
+                <Users size={32} />
+              </div>
+              <h3 className="text-xl font-serif font-bold text-primary mb-3">Community-Centred</h3>
+              <p className="text-foreground/70 font-sans leading-relaxed">
+                We begin by listening. Every intervention is co-designed with community input — responsive to local realities, culture, and the priorities of the people we serve.
+              </p>
+            </StaggerItem>
+          </StaggerContainer>
+
+          {/* Programs */}
+          <FadeIn className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Our Focus Areas</h2>
             <p className="text-lg text-foreground/70 font-sans">
-              We focus our energy where it can make the deepest impact: education for the next generation, and health for the mothers who raise them.
+              Education and health are the two most powerful pathways out of poverty. Our work addresses both.
             </p>
           </FadeIn>
 
@@ -252,9 +258,9 @@ export default function Home() {
                     <div className="w-16 h-16 bg-secondary/20 rounded-2xl flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
                       <BookOpen size={32} />
                     </div>
-                    <h3 className="text-3xl font-serif font-bold text-primary mb-4 group-hover:text-accent transition-colors">School Intervention</h3>
+                    <h3 className="text-3xl font-serif font-bold text-primary mb-4 group-hover:text-accent transition-colors">Education Intervention</h3>
                     <p className="text-foreground/70 font-sans text-lg mb-8 leading-relaxed">
-                      Transforming life trajectories through primary and secondary education scholarships, school supplies, and continuous mentorship.
+                      We remove barriers that prevent children and young people from accessing quality education through scholarships, school fee support, learning resources, mentorship, and initiatives that produce measurable educational outcomes.
                     </p>
                     <div className="inline-flex items-center text-primary font-bold gap-2 group-hover:gap-4 transition-all">
                       Explore Program <ArrowRight size={20} />
@@ -273,7 +279,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-3xl font-serif font-bold text-primary mb-4 group-hover:text-accent transition-colors">Health Intervention</h3>
                     <p className="text-foreground/70 font-sans text-lg mb-8 leading-relaxed">
-                      Reaching mothers who would otherwise go without care. Providing antenatal support, vital health resources, and outreach to remote communities.
+                      We develop health interventions that improve access to essential healthcare while promoting healthier communities — through health education, preventive care, medical outreach, and programs that address the social determinants of health.
                     </p>
                     <div className="inline-flex items-center text-primary font-bold gap-2 group-hover:gap-4 transition-all">
                       Explore Program <ArrowRight size={20} />
@@ -286,28 +292,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why We Exist */}
+      {/* Vision & Mission */}
       <section className="py-24 bg-muted overflow-hidden relative">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeIn direction="right">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
-                <img src={homeImpact} alt="Nigerian children playing" className="w-full h-full object-cover" />
+                <img src={homeImpact} alt="Nigerian children in their community" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-primary/10"></div>
               </div>
             </FadeIn>
 
             <FadeIn direction="left" className="max-w-xl">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Why We Exist</h2>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-8">Our Vision</h2>
               <div className="space-y-6 text-lg text-foreground/80 font-sans leading-relaxed">
                 <p>
-                  We believe that every child deserves the dignity of an education, and every mother deserves the safety of proper healthcare.
+                  We envision communities where every individual — regardless of socioeconomic background — has access to the education, healthcare, and opportunities they need to thrive.
                 </p>
                 <p>
-                  In the communities we serve, a simple scholarship is not just about books. It is about breaking a cycle. An antenatal visit is not just a checkup. It is a profound statement that a mother's life matters.
+                  Starting in Nigeria, our mission is to grow across Africa. We believe that meaningful, lasting change is achieved by addressing the structural barriers that limit people's ability to learn, stay healthy, and reach their full potential.
+                </p>
+                <p>
+                  We are not delivering short-term relief. We are designing sustainable systems that communities can own, build on, and carry forward.
                 </p>
                 <p className="font-serif text-2xl text-accent italic mt-8 border-l-4 border-secondary pl-6 py-2">
-                  "This work is not charity. It is love made visible."
+                  "Compassion plus evidence equals change that lasts."
                 </p>
               </div>
             </FadeIn>
@@ -315,22 +324,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 bg-background">
+      {/* Who We Serve */}
+      <section className="py-24 bg-background border-t border-border">
         <div className="container mx-auto px-4 md:px-6 text-center max-w-4xl">
           <FadeIn>
-            <h2 className="text-4xl md:text-6xl font-serif font-bold text-primary mb-8">
-              Be part of the story.
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Who We Serve</h2>
+            <p className="text-xl text-foreground/70 font-sans mb-8 leading-relaxed max-w-3xl mx-auto">
+              WLFJ serves children, families, and underserved communities facing barriers to education, healthcare, and economic opportunity. We prioritize reaching those whose circumstances place them at greatest risk of being left behind.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 text-left">
+              {[
+                { label: "Children & Young People", desc: "Ages 16 and under facing barriers to quality education, school dropout risk, or financial hardship." },
+                { label: "Pregnant & New Mothers", desc: "Women in underserved areas with limited access to antenatal care, safe delivery, and postnatal support." },
+                { label: "Underserved Communities", desc: "Families in remote or low-income communities across Nigeria where structural barriers remain highest." },
+              ].map(({ label, desc }) => (
+                <div key={label} className="bg-muted p-6 rounded-2xl border border-border">
+                  <h4 className="font-serif text-lg font-bold text-primary mb-3">{label}</h4>
+                  <p className="text-foreground/70 font-sans text-sm leading-relaxed">{desc}</p>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 md:px-6 text-center max-w-4xl">
+          <FadeIn>
+            <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8">
+              Partner with us.
             </h2>
-            <p className="text-xl text-foreground/70 font-sans mb-10 leading-relaxed max-w-2xl mx-auto">
-              Your support translates directly into school fees, medical supplies, and hope for families who need it most.
+            <p className="text-xl text-primary-foreground/80 font-sans mb-10 leading-relaxed max-w-2xl mx-auto">
+              Whether through donations, volunteering, or strategic collaboration, your involvement drives real, measurable change in the communities that need it most.
             </p>
             <Link
               href="/contact"
               data-testid="link-cta-get-involved"
-              className="bg-accent text-accent-foreground px-10 py-5 rounded-full text-xl font-bold hover:bg-primary transition-all hover:shadow-xl hover:-translate-y-1 inline-flex items-center gap-3"
+              className="bg-secondary text-foreground px-10 py-5 rounded-full text-xl font-bold hover:bg-secondary/90 transition-all hover:shadow-xl hover:-translate-y-1 inline-flex items-center gap-3"
             >
-              Get Involved Today <ArrowRight size={24} />
+              Get Involved <ArrowRight size={24} />
             </Link>
           </FadeIn>
         </div>

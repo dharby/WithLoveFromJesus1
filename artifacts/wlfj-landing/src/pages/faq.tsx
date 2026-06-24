@@ -11,28 +11,44 @@ import { HelpCircle } from "lucide-react";
 export default function FAQ() {
   const faqs = [
     {
-      question: "Who is eligible for the School Intervention program?",
-      answer: "We focus on children aged 16 and under from highly vulnerable households who are at immediate risk of dropping out of school due to financial constraints. Beneficiaries are identified through community leaders, local school partnerships, and household assessments."
+      question: "What does With Love from Jesus (WLFJ) do?",
+      answer: "WLFJ is a nonprofit organisation that designs and delivers evidence-informed education and health interventions to reduce poverty and expand opportunity in underserved communities. We focus on two primary areas: removing barriers to quality education for children and young people, and improving access to essential healthcare for communities that are most at risk. Our work is rooted in Nigeria, with a long-term vision of expanding across Africa."
     },
     {
-      question: "What does a scholarship cover?",
-      answer: "A full scholarship covers annual tuition fees. The program often extends to cover essential school supplies including uniforms, textbooks, and writing materials, depending on the specific needs of the student."
+      question: "Who is eligible for the Education Intervention program?",
+      answer: "We prioritise children aged 16 and under from financially vulnerable households who are at risk of dropping out of school or who cannot access quality education due to cost. Beneficiaries are identified through community leaders, local school partnerships, and household vulnerability assessments conducted by our program team."
     },
     {
-      question: "Where are the Maternal Health programs located?",
-      answer: "Our maternal health initiatives operate primarily in remote and developing community areas where access to standard healthcare facilities is limited or nonexistent. We utilize both local clinic partnerships and mobile outreach teams."
+      question: "What does the education support cover?",
+      answer: "Our education program provides school fee support (tuition coverage), essential learning resources including textbooks, writing materials, uniforms, and bags, as well as ongoing mentorship and academic tracking. The specific support provided is tailored to each student's needs and the context of their school and community."
+    },
+    {
+      question: "Who does the Health Intervention program serve?",
+      answer: "Our health programs serve underserved communities with limited access to healthcare — including pregnant and new mothers, children, and families in remote or low-income areas. We focus particularly on groups facing the greatest structural barriers to care, including those in communities without nearby health facilities."
+    },
+    {
+      question: "What health services does WLFJ provide?",
+      answer: "Our health initiatives include maternal healthcare (antenatal, delivery support, and postnatal care), preventive care programs such as screenings and immunisation outreach, community health education, and mobile outreach to remote areas. We also provide essential medical supplies and work to connect communities with available health systems."
+    },
+    {
+      question: "What makes WLFJ's approach different from traditional charity?",
+      answer: "We are not delivering short-term relief. Every program we run is evidence-informed — designed based on an understanding of the structural barriers communities face, and built to produce measurable, sustainable outcomes. We measure what we do, learn from the evidence, and continuously improve our interventions. Our goal is lasting change, not one-off support."
+    },
+    {
+      question: "How can I partner with or support WLFJ?",
+      answer: "There are several ways to partner with us: financial donations to support our programs, sponsoring a specific student or health initiative, donating supplies (textbooks, stationery, medical supplies), volunteering your professional skills (medical, educational, administrative), or exploring strategic partnerships and collaborations. Reach out through our Contact page to discuss how you can get involved."
     },
     {
       question: "Can I donate physical items instead of money?",
-      answer: "Yes. For the School Intervention program, we gladly accept new or gently used textbooks, backpacks, and stationery. For the Health Intervention program, we accept sealed vitamins, clean baby clothes, and sanitary supplies. Please contact us to coordinate physical donations."
+      answer: "Yes. For the Education program, we accept new or gently used textbooks, backpacks, and stationery. For the Health program, we accept sealed vitamins, clean baby supplies, and sanitary materials. Please contact us before sending any physical donations so we can coordinate logistics and ensure your contribution reaches the right place."
     },
     {
-      question: "How is the organization funded?",
-      answer: "With Love from Jesus relies entirely on the generosity of individual donors, corporate partners, and grants from those who believe in making hope tangible through action. One hundred percent of designated program funds go directly to the beneficiaries."
+      question: "How does WLFJ ensure transparency and accountability?",
+      answer: "We are committed to transparency in how we operate and report our impact. We track program outcomes, measure beneficiary progress, and document how resources are used. Designated program funds go directly to beneficiaries and program delivery. We are happy to share information with partners and supporters about how their contributions are being used."
     },
     {
-      question: "Can I volunteer with the NGO?",
-      answer: "Absolutely. We are always looking for medical professionals for our health outreach, teachers or mentors for our education programs, and general volunteers for administrative and event support. Reach out via our Contact page to get involved."
+      question: "What is WLFJ's long-term vision?",
+      answer: "We envision communities — across Nigeria and ultimately across Africa — where every individual, regardless of socioeconomic background, has access to the education, healthcare, and opportunities they need to thrive. We are building toward that vision one evidence-informed intervention at a time, starting with the communities in Ado-Ekiti, Ekiti State."
     }
   ];
 
@@ -47,8 +63,8 @@ export default function FAQ() {
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-primary mb-6">
               Common Questions
             </h1>
-            <p className="text-xl text-foreground/70 font-sans">
-              Learn more about how our programs work and how you can be part of the mission.
+            <p className="text-xl text-foreground/70 font-sans leading-relaxed max-w-2xl mx-auto">
+              Learn more about who we are, how our programs work, and how you can play a part in expanding opportunity in underserved communities.
             </p>
           </FadeIn>
 

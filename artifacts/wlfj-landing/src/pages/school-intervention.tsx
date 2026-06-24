@@ -1,6 +1,6 @@
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/fade-in";
 import { Link } from "wouter";
-import { ArrowRight, GraduationCap, BookOpen, PenTool, Users } from "lucide-react";
+import { ArrowRight, GraduationCap, BookOpen, PenTool, Users, TrendingUp } from "lucide-react";
 import school1 from "@assets/bill-wegener-8ldqRkOk5oo-unsplash_1782214846278.jpg";
 import school2 from "@/assets/images/child-reading.png";
 
@@ -13,13 +13,13 @@ export default function SchoolIntervention() {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <FadeIn className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/20 text-secondary font-semibold text-sm mb-6 uppercase tracking-wider">
-              <GraduationCap size={18} /> Education Program
+              <GraduationCap size={18} /> Education Intervention
             </div>
             <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6">
-              Empowering the <span className="text-secondary italic">next generation.</span>
+              Removing barriers. <span className="text-secondary italic">Expanding opportunity.</span>
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/80 font-sans leading-relaxed">
-              We provide scholarships, supplies, and support for primary and secondary education because education changes everything.
+              We design and deliver evidence-informed education programs that improve outcomes for children and young people in underserved communities across Nigeria.
             </p>
           </FadeIn>
         </div>
@@ -30,17 +30,20 @@ export default function SchoolIntervention() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeIn direction="right" className="space-y-6 text-lg text-foreground/80 font-sans leading-relaxed">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">Education is freedom.</h2>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">Education is a pathway out of poverty.</h2>
               <p>
-                In many developing communities, the cost of basic schooling forces children out of the classroom and into early labor. Our School Intervention program is built to bridge that gap.
+                In many underserved communities, financial and structural barriers force children out of the classroom before they can reach their potential. School fees, lack of materials, and limited access to support systems create a cycle that is difficult to break alone.
               </p>
               <p>
-                By covering tuition, providing essential learning materials, and offering ongoing mentorship, we ensure that financial hardship does not dictate a child's potential. We partner with local schools to identify students at highest risk of dropping out.
+                Our Education Intervention program addresses these structural barriers directly. By providing school fee support, learning resources, and mentorship, we ensure that economic hardship does not determine a child's educational journey. Every initiative we run is designed to produce measurable, sustainable improvements in educational outcomes.
+              </p>
+              <p>
+                We work in close partnership with local schools, community leaders, and families to identify students at highest risk — and to design interventions that are responsive to the real conditions on the ground.
               </p>
             </FadeIn>
             <FadeIn direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-square md:aspect-[4/3]">
-                <img src={school1} alt="Children in classroom" className="w-full h-full object-cover" />
+                <img src={school1} alt="Children engaged in learning in a Nigerian classroom" className="w-full h-full object-cover" />
               </div>
             </FadeIn>
           </div>
@@ -50,18 +53,23 @@ export default function SchoolIntervention() {
       {/* Core Focus Areas */}
       <section className="py-24 bg-muted">
         <div className="container mx-auto px-4 md:px-6">
-          <FadeIn className="text-center mb-16">
+          <FadeIn className="text-center mb-4">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary">How We Intervene</h2>
           </FadeIn>
+          <FadeIn className="text-center max-w-2xl mx-auto mb-16">
+            <p className="text-foreground/70 font-sans text-lg">
+              Each initiative is practical, evidence-informed, and designed to produce long-term educational impact.
+            </p>
+          </FadeIn>
 
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <StaggerItem className="bg-card p-8 rounded-2xl border border-border shadow-sm">
               <div className="w-14 h-14 bg-secondary/20 rounded-xl flex items-center justify-center text-secondary mb-6">
                 <BookOpen size={28} />
               </div>
-              <h3 className="text-2xl font-serif font-bold text-primary mb-4">Scholarships</h3>
-              <p className="text-foreground/70 font-sans leading-relaxed">
-                Full coverage of tuition fees for primary and secondary students, ensuring uninterrupted learning paths.
+              <h3 className="text-xl font-serif font-bold text-primary mb-4">School Fee Support</h3>
+              <p className="text-foreground/70 font-sans leading-relaxed text-sm">
+                Direct coverage of tuition and school registration fees for primary and secondary students in vulnerable households, ensuring uninterrupted access to learning.
               </p>
             </StaggerItem>
 
@@ -69,9 +77,9 @@ export default function SchoolIntervention() {
               <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center text-accent mb-6">
                 <PenTool size={28} />
               </div>
-              <h3 className="text-2xl font-serif font-bold text-primary mb-4">Supplies Program</h3>
-              <p className="text-foreground/70 font-sans leading-relaxed">
-                Providing uniforms, textbooks, writing materials, and bags. A child should feel dignified and prepared when they walk into a classroom.
+              <h3 className="text-xl font-serif font-bold text-primary mb-4">Learning Resources</h3>
+              <p className="text-foreground/70 font-sans leading-relaxed text-sm">
+                Provision of textbooks, writing materials, uniforms, and bags. A student who arrives prepared and dignified is a student who can focus entirely on learning.
               </p>
             </StaggerItem>
 
@@ -79,9 +87,19 @@ export default function SchoolIntervention() {
               <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
                 <Users size={28} />
               </div>
-              <h3 className="text-2xl font-serif font-bold text-primary mb-4">Mentorship</h3>
-              <p className="text-foreground/70 font-sans leading-relaxed">
-                Academic tracking and emotional support. We do not just pay fees. We walk alongside our students throughout their journey.
+              <h3 className="text-xl font-serif font-bold text-primary mb-4">Mentorship</h3>
+              <p className="text-foreground/70 font-sans leading-relaxed text-sm">
+                Ongoing academic tracking, guidance, and emotional support. We walk alongside our beneficiaries — not just funding their education, but investing in their development.
+              </p>
+            </StaggerItem>
+
+            <StaggerItem className="bg-card p-8 rounded-2xl border border-border shadow-sm">
+              <div className="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mb-6">
+                <TrendingUp size={28} />
+              </div>
+              <h3 className="text-xl font-serif font-bold text-primary mb-4">Outcome Tracking</h3>
+              <p className="text-foreground/70 font-sans leading-relaxed text-sm">
+                We monitor attendance, performance, and retention across all supported students. Measuring outcomes is how we ensure our programs remain effective and improve over time.
               </p>
             </StaggerItem>
           </StaggerContainer>
@@ -94,16 +112,21 @@ export default function SchoolIntervention() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeIn direction="right" className="order-2 lg:order-1">
               <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-square md:aspect-[4/3]">
-                <img src={school2} alt="Child reading" className="w-full h-full object-cover" />
+                <img src={school2} alt="Child engaged in reading" className="w-full h-full object-cover" />
               </div>
             </FadeIn>
             <FadeIn direction="left" className="order-1 lg:order-2 space-y-6 text-lg text-foreground/80 font-sans leading-relaxed">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">The ripple effect of a single book.</h2>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">The multiplier effect of education.</h2>
               <p>
-                When a child learns to read, write, and think critically, they do not just change their own future. They uplift their family, contribute to their community, and break generational cycles of poverty.
+                When a child gains access to quality education, the benefits extend far beyond that individual. Educated children grow into adults who lift their families, contribute to their communities, and break generational cycles of poverty.
+              </p>
+              <p>
+                This is why we do not see our work as charity. We see it as a long-term investment in human potential — one that yields returns for entire communities, and ultimately for Africa as a whole.
               </p>
               <div className="bg-secondary/10 border border-secondary/30 p-6 rounded-xl mt-8">
-                <p className="font-serif italic text-xl text-primary mb-2">"Before the scholarship, I worked in the market during school hours. Now I am top of my class in science."</p>
+                <p className="font-serif italic text-xl text-primary mb-2">
+                  "Before the support, I had to work during school hours to help my family. Now I am focused, in class, and top of my set in science."
+                </p>
                 <span className="text-sm font-bold text-accent uppercase tracking-widest">Secondary Student, Program Beneficiary</span>
               </div>
             </FadeIn>
@@ -111,19 +134,64 @@ export default function SchoolIntervention() {
         </div>
       </section>
 
+      {/* Who is Eligible */}
+      <section className="py-20 bg-muted border-t border-border">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <FadeIn className="text-center mb-12">
+            <h2 className="text-3xl font-serif font-bold text-primary">Who We Prioritise</h2>
+          </FadeIn>
+          <FadeIn>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-card p-8 rounded-2xl border border-border">
+                <h4 className="font-serif text-xl font-bold text-primary mb-4">Eligibility Criteria</h4>
+                <ul className="space-y-3 text-foreground/80 font-sans">
+                  {[
+                    "Children aged 16 and under",
+                    "From financially vulnerable households",
+                    "At immediate risk of dropping out of school",
+                    "Enrolled or seeking enrolment in primary or secondary school",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="text-secondary font-bold mt-1">—</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-card p-8 rounded-2xl border border-border">
+                <h4 className="font-serif text-xl font-bold text-primary mb-4">How We Identify Beneficiaries</h4>
+                <ul className="space-y-3 text-foreground/80 font-sans">
+                  {[
+                    "Referrals from local school administrators",
+                    "Community leader and neighbourhood networks",
+                    "Household vulnerability assessments",
+                    "Applications reviewed by our program team",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="text-accent font-bold mt-1">—</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24 bg-primary text-primary-foreground text-center">
         <div className="container mx-auto px-4 md:px-6 max-w-3xl">
           <FadeIn>
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-8">Fund a student's future.</h2>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-8">Invest in a student's potential.</h2>
             <p className="text-xl text-primary-foreground/80 font-sans mb-10 leading-relaxed">
-              Your partnership can keep a child in the classroom. Reach out to learn how you can sponsor a student or donate supplies.
+              Your partnership can keep a child in the classroom. Reach out to learn how you can sponsor a student, donate supplies, or collaborate with our education team.
             </p>
             <Link
               href="/contact"
               className="bg-secondary text-foreground px-10 py-5 rounded-full text-xl font-bold hover:bg-secondary/90 transition-all hover:shadow-xl hover:-translate-y-1 inline-flex items-center gap-3"
             >
-              Support a Student <ArrowRight size={24} />
+              Support the Program <ArrowRight size={24} />
             </Link>
           </FadeIn>
         </div>
