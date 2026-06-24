@@ -24,7 +24,6 @@ export default function SchoolIntervention() {
           </FadeIn>
         </div>
       </section>
-
       {/* Intro & Image */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
@@ -37,9 +36,7 @@ export default function SchoolIntervention() {
               <p>
                 Our Education Intervention program addresses these structural barriers directly. By providing school fee support, learning resources, and mentorship, we ensure that economic hardship does not determine a child's educational journey. Every initiative we run is designed to produce measurable, sustainable improvements in educational outcomes.
               </p>
-              <p>
-                We work in close partnership with local schools, community leaders, and families to identify students at highest risk — and to design interventions that are responsive to the real conditions on the ground.
-              </p>
+              <p>We work in close partnership with local schools, community leaders, and families to identify students at highest risk and to design interventions that are responsive to the real conditions on the ground.</p>
             </FadeIn>
             <FadeIn direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-square md:aspect-[4/3]">
@@ -49,7 +46,6 @@ export default function SchoolIntervention() {
           </div>
         </div>
       </section>
-
       {/* Core Focus Areas */}
       <section className="py-24 bg-muted">
         <div className="container mx-auto px-4 md:px-6">
@@ -89,7 +85,7 @@ export default function SchoolIntervention() {
               </div>
               <h3 className="text-xl font-serif font-bold text-primary mb-4">Mentorship</h3>
               <p className="text-foreground/70 font-sans leading-relaxed text-sm">
-                Ongoing academic tracking, guidance, and emotional support. We walk alongside our beneficiaries — not just funding their education, but investing in their development.
+                Ongoing academic tracking, guidance, and emotional support. We walk alongside our beneficiaries, not just funding their education, but investing in their development.
               </p>
             </StaggerItem>
 
@@ -105,7 +101,6 @@ export default function SchoolIntervention() {
           </StaggerContainer>
         </div>
       </section>
-
       {/* Story / Focus */}
       <section className="py-24 bg-background border-t border-border">
         <div className="container mx-auto px-4 md:px-6">
@@ -133,7 +128,6 @@ export default function SchoolIntervention() {
           </div>
         </div>
       </section>
-
       {/* Who is Eligible */}
       <section className="py-20 bg-muted border-t border-border">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
@@ -178,7 +172,6 @@ export default function SchoolIntervention() {
           </FadeIn>
         </div>
       </section>
-
       {/* CTA */}
       <section className="py-24 bg-primary text-primary-foreground text-center">
         <div className="container mx-auto px-4 md:px-6 max-w-3xl">
