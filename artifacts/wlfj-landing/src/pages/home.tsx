@@ -23,7 +23,7 @@ const slides = [
     src: heroSlide4,
     alt: "Students attentively learning in a Nigerian classroom",
     headline: ["Education removes", "structural barriers."],
-    sub: "We remove the financial and systemic obstacles that prevent children from accessing quality education — through scholarships, resources, and ongoing mentorship.",
+    sub: "We remove the financial and systemic obstacles that prevent children from accessing quality education through scholarships, resources, and ongoing mentorship.",
   },
   {
     src: heroSlide5,
@@ -45,6 +45,8 @@ const slides = [
   },
 ];
 
+const allImages = [heroMain, heroSlide2, heroSlide3, heroSlide4, heroSlide5];
+
 const textVariants = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number) => ({
@@ -56,10 +58,17 @@ const textVariants = {
 };
 
 const imageVariants = {
-  enter: { opacity: 0, scale: 1.06 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 1.1, ease: "easeOut" } },
-  exit: { opacity: 0, scale: 0.98, transition: { duration: 0.7, ease: "easeIn" } },
+  enter: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 1.0, ease: "easeOut" } },
+  exit: { opacity: 0, transition: { duration: 0.6, ease: "easeIn" } },
 };
+
+const beams = [
+  { left: "8%",  duration: 11, delay: 0 },
+  { left: "32%", duration: 15, delay: 4 },
+  { left: "62%", duration: 13, delay: 7.5 },
+  { left: "82%", duration: 10, delay: 2 },
+];
 
 export default function Home() {
   const [current, setCurrent] = useState(0);
@@ -79,6 +88,15 @@ export default function Home() {
     <main className="w-full">
       {/* Hero Slideshow */}
       <section data-testid="section-hero" className="relative min-h-screen flex items-center overflow-hidden bg-foreground pt-16">
+
+        {/* Eagerly preload all hero images */}
+        <div className="hidden" aria-hidden="true">
+          {allImages.map((src, i) => (
+            <img key={i} src={src} alt="" fetchPriority={i === 0 ? "high" : "low"} />
+          ))}
+        </div>
+
+        {/* Slide background */}
         <AnimatePresence mode="sync">
           <motion.div
             key={`bg-${current}`}
@@ -88,11 +106,41 @@ export default function Home() {
             exit="exit"
             className="absolute inset-0 z-0"
           >
-            <img src={slide.src} alt={slide.alt} className="w-full h-full object-cover object-center" />
+            <img
+              src={slide.src}
+              alt={slide.alt}
+              fetchPriority="high"
+              className="w-full h-full object-cover object-center"
+            />
             <div className="absolute inset-0 bg-foreground/55" />
           </motion.div>
         </AnimatePresence>
 
+        {/* Animated light beams */}
+        <div className="absolute inset-0 z-10 pointer-events-none overflow-hidden">
+          {beams.map((beam, i) => (
+            <motion.div
+              key={i}
+              className="absolute top-0 bottom-0 w-14 md:w-20"
+              style={{
+                left: beam.left,
+                background:
+                  "linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.055) 30%, rgba(255,255,255,0.055) 70%, transparent 100%)",
+                transform: "skewX(-18deg)",
+              }}
+              animate={{ x: ["-50vw", "60vw"] }}
+              transition={{
+                duration: beam.duration,
+                repeat: Infinity,
+                repeatType: "mirror",
+                ease: "easeInOut",
+                delay: beam.delay,
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Text content */}
         <div className="container mx-auto px-4 md:px-16 relative z-20 py-24">
           <div className="max-w-3xl">
             <AnimatePresence mode="wait">
@@ -181,6 +229,7 @@ export default function Home() {
           {String(current + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
         </div>
       </section>
+
       {/* Impact Counters */}
       <section className="py-20 bg-primary text-primary-foreground" data-testid="section-impact">
         <div className="container mx-auto px-4 md:px-6">
@@ -200,13 +249,14 @@ export default function Home() {
           </StaggerContainer>
         </div>
       </section>
+
       {/* Our Approach */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <FadeIn className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Our Approach</h2>
             <p className="text-lg text-foreground/70 font-sans leading-relaxed">
-              We combine compassion with evidence — designing practical interventions that are measurable, sustainable, and responsive to the real needs of the communities we serve.
+              We combine compassion with evidence, designing practical interventions that are measurable, sustainable, and responsive to the real needs of the communities we serve.
             </p>
           </FadeIn>
 
@@ -234,7 +284,9 @@ export default function Home() {
                 <Users size={32} />
               </div>
               <h3 className="text-xl font-serif font-bold text-primary mb-3">Community-Centred</h3>
-              <p className="text-foreground/70 font-sans leading-relaxed">We begin by listening. Every intervention is co-designed with community input, responsive to local realities, culture, and the priorities of the people we serve.</p>
+              <p className="text-foreground/70 font-sans leading-relaxed">
+                We begin by listening. Every intervention is co-designed with community input, responsive to local realities, culture, and the priorities of the people we serve.
+              </p>
             </StaggerItem>
           </StaggerContainer>
 
@@ -287,6 +339,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* Vision & Mission */}
       <section className="py-24 bg-muted overflow-hidden relative">
         <div className="container mx-auto px-4 md:px-6">
@@ -302,7 +355,7 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-8">Our Vision</h2>
               <div className="space-y-6 text-lg text-foreground/80 font-sans leading-relaxed">
                 <p>
-                  We envision communities where every individual — regardless of socioeconomic background has access to the education, healthcare, and opportunities they need to thrive.
+                  We envision communities where every individual, regardless of socioeconomic background, has access to the education, healthcare, and opportunities they need to thrive.
                 </p>
                 <p>
                   Starting in Nigeria, our mission is to grow across Africa. We believe that meaningful, lasting change is achieved by addressing the structural barriers that limit people's ability to learn, stay healthy, and reach their full potential.
@@ -318,6 +371,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* Who We Serve */}
       <section className="py-24 bg-background border-t border-border">
         <div className="container mx-auto px-4 md:px-6 text-center max-w-4xl">
@@ -341,6 +395,7 @@ export default function Home() {
           </FadeIn>
         </div>
       </section>
+
       {/* CTA */}
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 md:px-6 text-center max-w-4xl">

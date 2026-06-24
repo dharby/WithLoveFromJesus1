@@ -116,7 +116,7 @@ export default function SchoolIntervention() {
                 When a child gains access to quality education, the benefits extend far beyond that individual. Educated children grow into adults who lift their families, contribute to their communities, and break generational cycles of poverty.
               </p>
               <p>
-                This is why we do not see our work as charity. We see it as a long-term investment in human potential — one that yields returns for entire communities, and ultimately for Africa as a whole.
+                This is why we do not see our work as charity. We see it as a long-term investment in human potential, one that yields returns for entire communities, and ultimately for Africa as a whole.
               </p>
               <div className="bg-secondary/10 border border-secondary/30 p-6 rounded-xl mt-8">
                 <p className="font-serif italic text-xl text-primary mb-2">

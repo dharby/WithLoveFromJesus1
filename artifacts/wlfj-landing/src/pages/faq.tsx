@@ -24,7 +24,7 @@ export default function FAQ() {
     },
     {
       question: "Who does the Health Intervention program serve?",
-      answer: "Our health programs serve underserved communities with limited access to healthcare — including pregnant and new mothers, children, and families in remote or low-income areas. We focus particularly on groups facing the greatest structural barriers to care, including those in communities without nearby health facilities."
+      answer: "Our health programs serve underserved communities with limited access to healthcare, including pregnant and new mothers, children, and families in remote or low-income areas. We focus particularly on groups facing the greatest structural barriers to care, including those in communities without nearby health facilities."
     },
     {
       question: "What health services does WLFJ provide?",
@@ -32,7 +32,7 @@ export default function FAQ() {
     },
     {
       question: "What makes WLFJ's approach different from traditional charity?",
-      answer: "We are not delivering short-term relief. Every program we run is evidence-informed — designed based on an understanding of the structural barriers communities face, and built to produce measurable, sustainable outcomes. We measure what we do, learn from the evidence, and continuously improve our interventions. Our goal is lasting change, not one-off support."
+      answer: "We are not delivering short-term relief. Every program we run is evidence-informed, designed based on an understanding of the structural barriers communities face, and built to produce measurable, sustainable outcomes. We measure what we do, learn from the evidence, and continuously improve our interventions. Our goal is lasting change, not one-off support."
     },
     {
       question: "How can I partner with or support WLFJ?",
@@ -48,7 +48,7 @@ export default function FAQ() {
     },
     {
       question: "What is WLFJ's long-term vision?",
-      answer: "We envision communities — across Nigeria and ultimately across Africa — where every individual, regardless of socioeconomic background, has access to the education, healthcare, and opportunities they need to thrive. We are building toward that vision one evidence-informed intervention at a time, starting with the communities in Ado-Ekiti, Ekiti State."
+      answer: "We envision communities across Nigeria and ultimately across Africa where every individual, regardless of socioeconomic background, has access to the education, healthcare, and opportunities they need to thrive. We are building toward that vision one evidence-informed intervention at a time, starting with the communities in Ado-Ekiti, Ekiti State."
     }
   ];
 

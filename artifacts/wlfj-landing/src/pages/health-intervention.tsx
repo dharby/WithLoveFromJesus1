@@ -32,13 +32,13 @@ export default function HealthIntervention() {
             <FadeIn direction="right" className="space-y-6 text-lg text-foreground/80 font-sans leading-relaxed">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">Health is a foundation, not a privilege.</h2>
               <p>
-                In underserved communities, poor health is not just a personal challenge — it is a structural one. Limited access to healthcare facilities, unaffordable services, and a lack of health education create conditions where preventable illnesses flourish and vulnerable populations are most at risk.
+                In underserved communities, poor health is not just a personal challenge; it is a structural one. Limited access to healthcare facilities, unaffordable services, and a lack of health education create conditions where preventable illnesses flourish and vulnerable populations are most at risk.
               </p>
               <p>
                 Our Health Intervention programs take a multi-pronged approach: improving direct access to care through outreach and partnerships, building health literacy within communities, and designing preventive programs that produce long-term population-level change.
               </p>
               <p>
-                We work across the continuum of care — from community health education through to targeted outreach for groups facing the greatest barriers, including pregnant and new mothers in remote areas.
+                We work across the continuum of care, from community health education through to targeted outreach for groups facing the greatest barriers, including pregnant and new mothers in remote areas.
               </p>
             </FadeIn>
             <FadeIn direction="left">
@@ -99,7 +99,7 @@ export default function HealthIntervention() {
               </div>
               <h3 className="text-xl font-serif font-bold text-primary mb-4">Medical Outreach</h3>
               <p className="text-foreground/70 font-sans leading-relaxed text-sm">
-                Mobile outreach teams that travel to communities without clinic access — providing screenings, essential supplies, vitamins, and direct medical support where it is needed most.
+                Mobile outreach teams that travel to communities without clinic access, providing screenings, essential supplies, vitamins, and direct medical support where it is needed most.
               </p>
             </StaggerItem>
           </StaggerContainer>
@@ -118,14 +118,14 @@ export default function HealthIntervention() {
             <FadeIn direction="left" className="order-1 lg:order-2 space-y-6 text-lg text-foreground/80 font-sans leading-relaxed">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">Addressing the root causes of poor health.</h2>
               <p>
-                We recognise that health outcomes are deeply shaped by social and economic conditions — access to clean water, food security, housing, income, and education. Our programs are designed with this understanding at their core.
+                We recognise that health outcomes are deeply shaped by social and economic conditions: access to clean water, food security, housing, income, and education. Our programs are designed with this understanding at their core.
               </p>
               <p>
-                Our community outreach teams operate in areas where healthcare infrastructure does not reach. We conduct screenings, build trusted relationships within communities, and design follow-up care pathways — not one-off visits.
+                Our community outreach teams operate in areas where healthcare infrastructure does not reach. We conduct screenings, build trusted relationships within communities, and design follow-up care pathways, not one-off visits.
               </p>
               <div className="bg-accent/10 border border-accent/20 p-6 rounded-xl mt-8">
                 <p className="font-serif italic text-xl text-primary mb-2">
-                  "When the mobile outreach team came to our area, it was the first time many of us had seen a health worker. They did not just visit — they came back."
+                  "When the mobile outreach team came to our area, it was the first time many of us had seen a health worker. They did not just visit; they came back."
                 </p>
                 <span className="text-sm font-bold text-accent uppercase tracking-widest">Community Resident, Outreach Participant</span>
               </div>

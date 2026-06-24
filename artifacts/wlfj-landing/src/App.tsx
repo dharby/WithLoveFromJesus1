@@ -7,6 +7,7 @@ import NotFound from "@/pages/not-found";
 
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { CustomCursor } from "@/components/ui/CustomCursor";
 
 import Home from "@/pages/home";
 import SchoolIntervention from "@/pages/school-intervention";
@@ -45,9 +46,19 @@ function Router() {
 }
 
 function App() {
+  useEffect(() => {
+    const el = document.getElementById("wlfj-loading");
+    if (el) {
+      el.style.transition = "opacity 0.6s ease";
+      el.style.opacity = "0";
+      setTimeout(() => el.remove(), 700);
+    }
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <CustomCursor />
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
           <Router />
         </WouterRouter>
