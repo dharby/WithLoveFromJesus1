@@ -46,15 +46,6 @@ function Router() {
 }
 
 function App() {
-  useEffect(() => {
-    const el = document.getElementById("wlfj-loading");
-    if (el) {
-      el.style.transition = "opacity 0.6s ease";
-      el.style.opacity = "0";
-      setTimeout(() => el.remove(), 700);
-    }
-  }, []);
-
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>

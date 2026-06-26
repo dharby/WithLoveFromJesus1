@@ -1,0 +1,12 @@
+{
+  "buildCommand": "pnpm --filter @workspace/wlfj-landing build",
+  "outputDirectory": "artifacts/wlfj-landing/dist/public",
+  "installCommand": "pnpm install",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
