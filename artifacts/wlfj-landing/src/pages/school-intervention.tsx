@@ -1,8 +1,8 @@
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/fade-in";
 import { Link } from "wouter";
 import { ArrowRight, GraduationCap, BookOpen, PenTool, Users, TrendingUp } from "lucide-react";
-import school1 from "@assets/bill-wegener-8ldqRkOk5oo-unsplash_1782214846278.jpg";
-import school2 from "@/assets/images/child-reading.png";
+const school1 = "/images/classroom.jpg";
+const school2 = "/images/library001.jpeg";
 
 export default function SchoolIntervention() {
   return (
@@ -16,10 +16,10 @@ export default function SchoolIntervention() {
               <GraduationCap size={18} /> Education Intervention
             </div>
             <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6">
-              Removing barriers. <span className="text-secondary italic">Expanding opportunity.</span>
+              Removing barriers. <span className="text-secondary italic">Expanding opportunities.</span>
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/80 font-sans leading-relaxed">
-              We design and deliver evidence-informed education programs that improve outcomes for children and young people in underserved communities across Nigeria.
+              We design and deliver evidence-based education programs that improve outcomes for children and young people across Nigeria.
             </p>
           </FadeIn>
         </div>
@@ -29,14 +29,20 @@ export default function SchoolIntervention() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeIn direction="right" className="space-y-6 text-lg text-foreground/80 font-sans leading-relaxed">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">Education is a pathway out of poverty.</h2>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">Education is the pathway out of poverty.</h2>
               <p>
-                In many underserved communities, financial and structural barriers force children out of the classroom before they can reach their potential. School fees, lack of materials, and limited access to support systems create a cycle that is difficult to break alone.
+                Education is one of the most powerful tools for breaking the cycle of poverty, yet for many families in Nigeria, keeping a child in school is a daily struggle. Between low incomes and the rising cost of living, parents are often forced to choose between meeting basic needs and investing in their children's education.
               </p>
               <p>
-                Our Education Intervention program addresses these structural barriers directly. By providing school fee support, learning resources, and mentorship, we ensure that economic hardship does not determine a child's educational journey. Every initiative we run is designed to produce measurable, sustainable improvements in educational outcomes.
+                When children miss school, lack essential learning materials, or receive an inconsistent education, the consequences extend far beyond the classroom. Society loses future engineers, teachers, doctors, entrepreneurs, and innovators whose ideas could have solved the very challenges they grew up experiencing.
               </p>
-              <p>We work in close partnership with local schools, community leaders, and families to identify students at highest risk and to design interventions that are responsive to the real conditions on the ground.</p>
+              <p>
+                At With Love, From Jesus, we believe every child has the capacity to become a problem solver. Children growing up in communities understand their realities better than anyone else. With access to quality education, learning resources, mentorship, and sustained support, they can develop the knowledge and confidence to create lasting change where it is needed most.
+              </p>
+              <p>
+                Our Education Intervention Programme removes the barriers that stand between children and opportunity. By helping children stay in school, providing the tools they need to learn, and supporting them throughout their educational journey, we are investing not only in individual futures but in stronger, more resilient communities.
+              </p>
+              <p>We work closely with local schools, community leaders, and families to identify students most at risk and design interventions that respond to the realities they face every day.</p>
             </FadeIn>
             <FadeIn direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-square md:aspect-[4/3]">
@@ -54,7 +60,7 @@ export default function SchoolIntervention() {
           </FadeIn>
           <FadeIn className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-foreground/70 font-sans text-lg">
-              Each initiative is practical, evidence-informed, and designed to produce long-term educational impact.
+              Each initiative is practical, evidence-based, and designed to produce long-term educational impact.
             </p>
           </FadeIn>
 
@@ -83,9 +89,9 @@ export default function SchoolIntervention() {
               <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
                 <Users size={28} />
               </div>
-              <h3 className="text-xl font-serif font-bold text-primary mb-4">Mentorship</h3>
+              <h3 className="text-xl font-serif font-bold text-primary mb-4">Christocentric mentorship</h3>
               <p className="text-foreground/70 font-sans leading-relaxed text-sm">
-                Ongoing academic tracking, guidance, and emotional support. We walk alongside our beneficiaries, not just funding their education, but investing in their development.
+                Ongoing academic tracking, guidance, and emotional support. We walk alongside our beneficiaries, not just funding their education, but investing in their development through Christocentric mentorship.
               </p>
             </StaggerItem>
 
@@ -107,16 +113,16 @@ export default function SchoolIntervention() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeIn direction="right" className="order-2 lg:order-1">
               <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-square md:aspect-[4/3]">
-                <img src={school2} alt="Child engaged in reading" className="w-full h-full object-cover" />
+                <img src={school2} alt="Library with bookshelves" className="w-full h-full object-cover" />
               </div>
             </FadeIn>
             <FadeIn direction="left" className="order-1 lg:order-2 space-y-6 text-lg text-foreground/80 font-sans leading-relaxed">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">The multiplier effect of education.</h2>
               <p>
-                When a child gains access to quality education, the benefits extend far beyond that individual. Educated children grow into adults who lift their families, contribute to their communities, and break generational cycles of poverty.
+                When a child gains access to quality education, the impact extends far beyond that individual. Educated children grow into capable adults who drive innovation, strengthen their communities, and contribute to the lasting social change we all want to see.
               </p>
               <p>
-                This is why we do not see our work as charity. We see it as a long-term investment in human potential, one that yields returns for entire communities, and ultimately for Africa as a whole.
+                That is why we do not simply do charity. We design our programmes to be strategic, intentional, and future-focused. Every project is a long-term investment in human potential, creating ripple effects that benefit families, strengthen communities, and ultimately contribute to Africa's development.
               </p>
               <div className="bg-secondary/10 border border-secondary/30 p-6 rounded-xl mt-8">
                 <p className="font-serif italic text-xl text-primary mb-2">

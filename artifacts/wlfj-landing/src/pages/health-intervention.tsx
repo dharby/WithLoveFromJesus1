@@ -19,7 +19,7 @@ export default function HealthIntervention() {
               Healthier people. <span className="italic opacity-90">Stronger communities.</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 font-sans leading-relaxed">
-              We develop evidence-informed health interventions that improve access to essential care, promote preventive health behaviours, and address the social determinants that keep communities vulnerable.
+              We develop evidence-based health interventions that improve access to essential care, promote preventive health behaviours, and address the social determinants that keep communities vulnerable.
             </p>
           </FadeIn>
         </div>
@@ -32,7 +32,7 @@ export default function HealthIntervention() {
             <FadeIn direction="right" className="space-y-6 text-lg text-foreground/80 font-sans leading-relaxed">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">Health is a foundation, not a privilege.</h2>
               <p>
-                In underserved communities, poor health is not just a personal challenge; it is a structural one. Limited access to healthcare facilities, unaffordable services, and a lack of health education create conditions where preventable illnesses flourish and vulnerable populations are most at risk.
+                In many communities, poor health is not just a personal challenge; it is a structural one. Limited access to healthcare facilities, unaffordable services, and a lack of health education create conditions where preventable illnesses flourish and vulnerable populations are most at risk.
               </p>
               <p>
                 Our Health Intervention programs take a multi-pronged approach: improving direct access to care through outreach and partnerships, building health literacy within communities, and designing preventive programs that produce long-term population-level change.
@@ -69,7 +69,7 @@ export default function HealthIntervention() {
               </div>
               <h3 className="text-xl font-serif font-bold text-primary mb-4">Maternal Health</h3>
               <p className="text-foreground/70 font-sans leading-relaxed text-sm">
-                Antenatal care, safe delivery support, and postnatal follow-up for pregnant and new mothers in underserved and remote communities where access to standard clinical care is limited.
+                Antenatal care, safe delivery support, and postnatal follow-up for pregnant and new mothers in communities where access to standard clinical care is limited.
               </p>
             </StaggerItem>
 

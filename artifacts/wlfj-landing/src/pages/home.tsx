@@ -15,32 +15,32 @@ import homeImpact from "@/assets/images/kids-playing.png";
 const slides = [
   {
     src: heroMain,
-    alt: "Children in an underserved Nigerian community",
-    headline: ["Reducing poverty.", "Expanding opportunity."],
-    sub: "WLFJ designs and delivers evidence-informed education and health interventions for underserved communities across Nigeria and Africa.",
+    alt: "Children in a Nigerian community",
+    headline: ["Expanding opportunity.", "Building futures."],
+    sub: "WLFJ designs and delivers evidence-based education and health interventions across Nigeria and Africa.",
   },
   {
     src: heroSlide4,
     alt: "Students attentively learning in a Nigerian classroom",
     headline: ["Education removes", "structural barriers."],
-    sub: "We remove the financial and systemic obstacles that prevent children from accessing quality education through scholarships, resources, and ongoing mentorship.",
+    sub: "We remove the financial and systemic obstacles that prevent children from accessing quality education through scholarships, resources, and Christocentric mentorship.",
   },
   {
     src: heroSlide5,
     alt: "A young African mother holding her newborn baby",
-    headline: ["Health is a", "pathway out of poverty."],
-    sub: "Our health interventions improve access to essential care, promote healthier communities, and address the social determinants that keep families trapped in hardship.",
+    headline: ["Health is a", "foundation, not a privilege."],
+    sub: "Our health interventions improve access to essential care, promote healthier communities, and address the social determinants that keep families vulnerable.",
   },
   {
     src: heroSlide2,
     alt: "A child with a determined gaze",
-    headline: ["Every child.", "Every opportunity."],
+    headline: ["Every child deserves", "an opportunity."],
     sub: "We believe that socioeconomic background should never determine a child's ability to learn, grow, and reach their full potential.",
   },
   {
     src: heroSlide3,
     alt: "A young girl with a steadfast look",
-    headline: ["Evidence-informed.", "Community-centred."],
+    headline: ["Evidence-based.", "Community-centred."],
     sub: "Every program begins with understanding community needs. We measure outcomes, learn from our work, and continuously improve our effectiveness.",
   },
 ];
@@ -235,16 +235,16 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-primary-foreground/20">
             <StaggerItem className="flex flex-col items-center justify-center p-6">
-              <AnimatedCounter value={1250} suffix="+" className="text-5xl md:text-6xl font-serif font-bold text-secondary mb-2" />
+              <AnimatedCounter value={140} suffix="+" className="text-5xl md:text-6xl font-serif font-bold text-secondary mb-2" />
               <p className="text-lg font-sans text-primary-foreground/90 uppercase tracking-wider font-medium">Beneficiaries Reached</p>
             </StaggerItem>
             <StaggerItem className="flex flex-col items-center justify-center p-6">
-              <AnimatedCounter value={450} className="text-5xl md:text-6xl font-serif font-bold text-secondary mb-2" />
+              <AnimatedCounter value={70} suffix="+" className="text-5xl md:text-6xl font-serif font-bold text-secondary mb-2" />
               <p className="text-lg font-sans text-primary-foreground/90 uppercase tracking-wider font-medium">Students Supported</p>
             </StaggerItem>
             <StaggerItem className="flex flex-col items-center justify-center p-6">
-              <AnimatedCounter value={890} suffix="+" className="text-5xl md:text-6xl font-serif font-bold text-secondary mb-2" />
-              <p className="text-lg font-sans text-primary-foreground/90 uppercase tracking-wider font-medium">Health Interventions</p>
+              <AnimatedCounter value={1} className="text-5xl md:text-6xl font-serif font-bold text-secondary mb-2" />
+              <p className="text-lg font-sans text-primary-foreground/90 uppercase tracking-wider font-medium">Health Intervention</p>
             </StaggerItem>
           </StaggerContainer>
         </div>
@@ -265,9 +265,9 @@ export default function Home() {
               <div className="w-16 h-16 bg-secondary/15 rounded-2xl flex items-center justify-center text-secondary mx-auto mb-6">
                 <Target size={32} />
               </div>
-              <h3 className="text-xl font-serif font-bold text-primary mb-3">Evidence-Informed</h3>
+              <h3 className="text-xl font-serif font-bold text-primary mb-3">Evidence-Based</h3>
               <p className="text-foreground/70 font-sans leading-relaxed">
-                Every program is designed with evidence at its core. We identify structural barriers, evaluate what works, and build interventions around proven approaches.
+                Every program is designed with existing evidence at its core. We work with a Human-Centered Design approach that identifies structural barriers, evaluates what has worked, prototypes our own programs, and then we iterate, integrate, and build interventions around proven approaches.
               </p>
             </StaggerItem>
             <StaggerItem className="text-center p-8">
@@ -276,7 +276,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-serif font-bold text-primary mb-3">Outcome-Focused</h3>
               <p className="text-foreground/70 font-sans leading-relaxed">
-                We measure what matters. Our programs track real outcomes — retention rates, health improvements, household-level change — so we can continuously improve.
+                We measure what matters. Our programs track actual results such as school retention rates, student performance metrics, improved health outcomes and their ripple effects so that we can continuously improve our efficiency.
               </p>
             </StaggerItem>
             <StaggerItem className="text-center p-8">
@@ -294,7 +294,7 @@ export default function Home() {
           <FadeIn className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Our Focus Areas</h2>
             <p className="text-lg text-foreground/70 font-sans">
-              Education and health are the two most powerful pathways out of poverty. Our work addresses both.
+              As an organisation, we focus on SDGs 3 and 4 (good health and well-being and quality education). Shortening the distance between children in communities and the four walls of a classroom, and the distance between pregnant mothers and a fully fitted hospital for antenatal appointments.
             </p>
           </FadeIn>
 
@@ -308,7 +308,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-3xl font-serif font-bold text-primary mb-4 group-hover:text-accent transition-colors">Education Intervention</h3>
                     <p className="text-foreground/70 font-sans text-lg mb-8 leading-relaxed">
-                      We remove barriers that prevent children and young people from accessing quality education through scholarships, school fee support, learning resources, mentorship, and initiatives that produce measurable educational outcomes.
+                      We remove barriers that prevent children and young people from accessing quality education by providing full-ride scholarships covering: school fee support, textbooks and notebooks, school uniforms, informal learning resources, mentorship, and other educational initiatives that produce measurable educational outcomes.
                     </p>
                     <div className="inline-flex items-center text-primary font-bold gap-2 group-hover:gap-4 transition-all">
                       Explore Program <ArrowRight size={20} />
@@ -378,13 +378,13 @@ export default function Home() {
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Who We Serve</h2>
             <p className="text-xl text-foreground/70 font-sans mb-8 leading-relaxed max-w-3xl mx-auto">
-              WLFJ serves children, families, and underserved communities facing barriers to education, healthcare, and economic opportunity. We prioritize reaching those whose circumstances place them at greatest risk of being left behind.
+              WLFJ serves children, families, and communities facing barriers to education, healthcare, and economic opportunity. We prioritize reaching those whose circumstances place them at greatest risk of being left behind.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 text-left">
               {[
                 { label: "Children & Young People", desc: "Ages 16 and under facing barriers to quality education, school dropout risk, or financial hardship." },
-                { label: "Pregnant & New Mothers", desc: "Women in underserved areas with limited access to antenatal care, safe delivery, and postnatal support." },
-                { label: "Underserved Communities", desc: "Families in remote or low-income communities across Nigeria where structural barriers remain highest." },
+                { label: "Pregnant & New Mothers", desc: "Women in areas with limited access to antenatal care, safe delivery, and postnatal support." },
+                { label: "Communities in Need", desc: "Families in remote or low-income communities across Nigeria where structural barriers remain highest." },
               ].map(({ label, desc }) => (
                 <div key={label} className="bg-muted p-6 rounded-2xl border border-border">
                   <h4 className="font-serif text-lg font-bold text-primary mb-3">{label}</h4>

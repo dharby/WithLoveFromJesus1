@@ -10,7 +10,7 @@ export function Footer() {
               With Love <span className="text-secondary italic">from Jesus</span>
             </h3>
             <p className="text-primary-foreground/80 max-w-md text-lg leading-relaxed font-sans mb-4">
-              An evidence-informed, impact-driven nonprofit designing and delivering education and health interventions to reduce poverty and expand opportunity in underserved communities.
+              An evidence-based, impact-driven organisation designing and delivering education and health interventions to reduce opportunity poverty in communities.
             </p>
             <p className="text-primary-foreground/60 font-sans text-sm">
               Based in Ado-Ekiti, Ekiti State, Nigeria. Working toward a healthier, more educated Africa.
@@ -47,9 +47,9 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="mailto:Withlovefromjesus.ng@gmail.com" className="hover:text-white transition-colors break-all">
-                  Withlovefromjesus.ng@gmail.com
-                </a>
+                <span className="italic text-primary-foreground/60">
+                  Stay connected
+                </span>
               </li>
               <li>
                 <a href="tel:07085427040" className="hover:text-white transition-colors">

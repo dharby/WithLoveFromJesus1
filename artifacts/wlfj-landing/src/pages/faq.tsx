@@ -12,7 +12,7 @@ export default function FAQ() {
   const faqs = [
     {
       question: "What does With Love from Jesus (WLFJ) do?",
-      answer: "WLFJ is a nonprofit organisation that designs and delivers evidence-informed education and health interventions to reduce poverty and expand opportunity in underserved communities. We focus on two primary areas: removing barriers to quality education for children and young people, and improving access to essential healthcare for communities that are most at risk. Our work is rooted in Nigeria, with a long-term vision of expanding across Africa."
+      answer: "WLFJ is a nonprofit organisation that designs and delivers evidence-based education and health interventions to expand opportunity in communities. We focus on two primary areas: removing barriers to quality education for children and young people, and improving access to essential healthcare for communities that are most at risk. Our work is rooted in Nigeria, with a long-term vision of expanding across Africa."
     },
     {
       question: "Who is eligible for the Education Intervention program?",
@@ -24,7 +24,7 @@ export default function FAQ() {
     },
     {
       question: "Who does the Health Intervention program serve?",
-      answer: "Our health programs serve underserved communities with limited access to healthcare, including pregnant and new mothers, children, and families in remote or low-income areas. We focus particularly on groups facing the greatest structural barriers to care, including those in communities without nearby health facilities."
+      answer: "Our health programs serve communities with limited access to healthcare, including pregnant and new mothers, children, and families in remote or low-income areas. We focus particularly on groups facing the greatest structural barriers to care, including those in communities without nearby health facilities."
     },
     {
       question: "What health services does WLFJ provide?",
@@ -32,7 +32,7 @@ export default function FAQ() {
     },
     {
       question: "What makes WLFJ's approach different from traditional charity?",
-      answer: "We are not delivering short-term relief. Every program we run is evidence-informed, designed based on an understanding of the structural barriers communities face, and built to produce measurable, sustainable outcomes. We measure what we do, learn from the evidence, and continuously improve our interventions. Our goal is lasting change, not one-off support."
+      answer: "We are not delivering short-term relief. Every program we run is evidence-based, designed based on a Human-Centered Design approach to understanding the structural barriers communities face, and built to produce measurable, sustainable outcomes. We measure what we do, learn from the evidence, and continuously improve our interventions. Our goal is lasting change, not one-off support."
     },
     {
       question: "How can I partner with or support WLFJ?",
@@ -48,7 +48,7 @@ export default function FAQ() {
     },
     {
       question: "What is WLFJ's long-term vision?",
-      answer: "We envision communities across Nigeria and ultimately across Africa where every individual, regardless of socioeconomic background, has access to the education, healthcare, and opportunities they need to thrive. We are building toward that vision one evidence-informed intervention at a time, starting with the communities in Ado-Ekiti, Ekiti State."
+      answer: "We envision communities across Nigeria and ultimately across Africa where every individual, regardless of socioeconomic background, has access to the education, healthcare, and opportunities they need to thrive. We are building toward that vision one evidence-based intervention at a time, starting with the communities in Ado-Ekiti, Ekiti State."
     }
   ];
 
@@ -64,7 +64,7 @@ export default function FAQ() {
               Common Questions
             </h1>
             <p className="text-xl text-foreground/70 font-sans leading-relaxed max-w-2xl mx-auto">
-              Learn more about who we are, how our programs work, and how you can play a part in expanding opportunity in underserved communities.
+              Learn more about who we are, how our programs work, and how you can play a part in expanding opportunity.
             </p>
           </FadeIn>
 
