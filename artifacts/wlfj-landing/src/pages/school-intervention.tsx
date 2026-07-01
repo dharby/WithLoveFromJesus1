@@ -126,9 +126,9 @@ export default function SchoolIntervention() {
               </p>
               <div className="bg-secondary/10 border border-secondary/30 p-6 rounded-xl mt-8">
                 <p className="font-serif italic text-xl text-primary mb-2">
-                  "Before the support, I had to work during school hours to help my family. Now I am focused, in class, and top of my set in science."
+                  "Thank you very much for this life-changing opportunity and for your dedication to helping students through their educational journey. Your decision to invest in our sons future has brought immense joy, relief and hope to our family. Not only will this scholarship alleviate the financial burden of his education, but it will also inspire him to work even harder towards achieving academic excellence and becoming a positive contributor to society."
                 </p>
-                <span className="text-sm font-bold text-accent uppercase tracking-widest">Secondary Student, Program Beneficiary</span>
+                <span className="text-sm font-bold text-accent uppercase tracking-widest">Parent of Program Beneficiary</span>
               </div>
             </FadeIn>
           </div>

@@ -16,7 +16,7 @@ const slides = [
   {
     src: heroMain,
     alt: "Children in a Nigerian community",
-    headline: ["Expanding opportunity.", "Building futures."],
+    headline: ["Every child deserves", "an opportunity."],
     sub: "WLFJ designs and delivers evidence-based education and health interventions across Nigeria and Africa.",
   },
   {
@@ -34,7 +34,7 @@ const slides = [
   {
     src: heroSlide2,
     alt: "A child with a determined gaze",
-    headline: ["Every child deserves", "an opportunity."],
+    headline: ["Expanding opportunity.", "Building futures."],
     sub: "We believe that socioeconomic background should never determine a child's ability to learn, grow, and reach their full potential.",
   },
   {
